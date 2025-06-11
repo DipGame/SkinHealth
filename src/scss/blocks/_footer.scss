@@ -1,0 +1,239 @@
+footer {
+    background-color: #0D1011;
+
+    * {
+        color: #FFFFFF;
+    }
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.footer-top_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-left_cont {
+    width: 100%;
+    max-width: 290px;
+    height: fit-content;
+    min-height: 236px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    img {
+        width: 200px;
+        object-fit: contain;
+        object-position: center;
+        aspect-ratio: 200/60;
+    }
+}
+
+.footer-adress_cont {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+
+    .adress,
+    .time {
+        font-family: Manrope;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        vertical-align: bottom;
+    }
+
+    .time {
+        color: #D9D0C180;
+    }
+}
+
+.footer-menu {
+    display: grid;
+    justify-content: space-between;
+    gap: 40px;
+    grid-template-columns: repeat(3, 215px);
+}
+
+.footer-menu_cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .cont {
+        height: fit-content;
+        display: flex;
+
+        svg {
+            display: none;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: fit-content;
+
+        li {
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                font-family: Manrope;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 120%;
+                letter-spacing: 0%;
+            }
+        }
+    }
+}
+
+.footer-menu_title {
+    font-family: Manrope;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    opacity: .5;
+    cursor: default;
+
+    &:hover {
+        color: #FFF;
+    }
+}
+
+.footer-right_cont {
+    width: 100%;
+    max-width: 185px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    min-height: 236px;
+
+    .cont_1 {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        .header-social_link {
+            border: none;
+        }
+    }
+
+    .button {
+        margin-top: auto;
+    }
+}
+
+.footer-phone {
+    font-family: Manrope;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    white-space: nowrap;
+}
+
+.footer-map_container {
+    width: 100%;
+    min-height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.more-height {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    transform: translateY(-50%) translateX(0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25px;
+    max-height: 25px;
+    min-height: 25px;
+    min-width: 25px;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: 1px solid #0B111F;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.more-height path {
+    transition: .5s;
+}
+
+.more-height:hover {
+    transition: .5s;
+    border: 1px solid #007EF5;
+    background-color: #007EF5;
+}
+
+.more-height:hover path {
+    fill: #FFF;
+}
+
+.overflow-hidden-bottom {
+    max-height: 236px;
+    transition: .5s;
+    overflow: hidden;
+    position: relative;
+  }
+
+.footer-check-height-cont .more-height {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.footer-menu_cont  {
+    position: relative;
+    height: fit-content;
+}
+
+.footer-menu_cont:hover .more-height {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%) translateX(0%);
+}
+
+.footer-check-height-cont:hover .more-height.opened {
+    transform: translateY(0%) translateX(0%) rotate(180deg);
+}
+
+.more-height.opened {
+    transform: translateY(0%) translateX(0%) rotate(180deg);
+}
+
+.overflow-hidden-bottom.opened {
+    max-height: 3000px;
+}
+
+.footer-check-height-cont {
+    position: relative;
+}
+
+.overflow-hidden-bottom {
+    padding-bottom: 40px;
+}
+
+@media (max-width: 960px) {
+    .more-height {
+        display: none;
+    }
+}
