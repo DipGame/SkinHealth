@@ -1,0 +1,238 @@
+.main-problem {
+    background-color: #FFFFFF;
+    padding: 32px 40px;
+    border-radius: 16px;
+
+    .card {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+
+        ul {
+            width: 100%;
+            max-width: 580px;
+
+            li {
+                a {
+                    padding: 14px 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    align-items: center;
+                    border-bottom: 1px solid #725E5180;
+                    position: relative;
+                    left: 0;
+
+                    svg {
+                        max-width: 8px;
+                        max-height: 16px;
+                        min-height: 16px;
+                        min-width: 8px;
+
+                        path {
+                            transition: .5s;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #725E51;
+                        color: #FFF;
+                        left: 15px;
+
+                        svg {
+
+                            path {
+                                stroke: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            aspect-ratio: 580/500;
+            object-fit: cover;
+            object-position: center;
+            max-width: 580px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+    }
+}
+
+.main-problem_btns {
+    display: flex;
+
+    .btn {
+        width: -webkit-fill-available;
+        color: #725E51;
+        font-family: Manrope;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        border: 1px solid #725E51;
+        min-height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        height: auto;
+        cursor: pointer;
+        transition: .5s;
+        margin-bottom: 40px;
+
+        &:not(:last-child) {
+            border-right: none;
+        }
+
+        &:hover,
+        &.active {
+            background-color: #725E51;
+            color: #FFF;
+        }
+
+        &:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        &:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .main-problem .card img {
+        max-width: 380px;
+    }
+}
+
+@media (min-width: 961px) {
+    .main-problem_mob {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .main-problem_btns,
+    .main-problem .card {
+        display: none;
+    }
+
+    .main-problem_mob {
+        display: flex;
+        flex-direction: column;
+
+        .quest-title {
+            min-height: 60px;
+            padding: 15px;
+            border: 1px solid #725E51;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #725e5100;
+            
+            
+
+            h3 {
+                color: #725E51;
+                font-family: Manrope;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                transition: .5s;
+            }
+        }
+
+        .quest-cont {
+            transition: .5s;
+
+            ul {
+
+                li {
+
+                    a {
+                        padding: 14px 12px;
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 20px;
+                        align-items: center;
+                        border-bottom: 1px solid #725E5180;
+                        position: relative;
+                        left: 0;
+                        font-family: Manrope;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+
+
+                        svg {
+                            max-width: 8px;
+                            max-height: 16px;
+                            min-height: 16px;
+                            min-width: 8px;
+
+                            path {
+                                transition: .5s;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #725E51;
+                            color: #FFF;
+                            left: 15px;
+
+                            svg {
+
+                                path {
+                                    stroke: #FFF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .card_v1 {
+
+            &:last-child {
+                .quest-title {
+                    border-bottom:  1px solid #725E51;
+                }
+            }
+
+            &.active {
+
+                .quest-title {
+                    background-color: #725E51;
+
+                    h3 {
+                        color: #FFFFFF;
+                    }
+                }
+
+                .quest-cont {
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .main-problem_section {
+        padding: 0;
+    }
+
+    .main-problem {
+        padding: 40px 16px;
+    }
+}

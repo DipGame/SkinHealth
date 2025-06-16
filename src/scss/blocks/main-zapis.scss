@@ -1,0 +1,113 @@
+.main-zapis {
+    padding: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 340px;
+    background-color: #D9D0C1;
+    border-radius: 16px;
+    background-image: url('./../img/паттерн 2.svg');
+    background-position: center;
+    background-size: cover;
+
+    h2 {
+        font-family: Manrope;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        max-width: 460px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .subtext {
+        font-family: Manrope;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: #6C5444;
+        max-width: 375px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .button {
+        margin-top: auto;
+        max-width: 213px;
+        height: 50px;
+        font-family: Manrope;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .back-img {
+        position: absolute;
+        left: auto;
+        right: 89px;
+        bottom: 0;
+        aspect-ratio: 1/1;
+        max-width: 348px;
+        object-fit: contain;
+        object-position: center;
+        height: auto;
+        z-index: 0;
+    }
+}
+
+@media (max-width: 960px) {
+    .main-zapis .back-img {
+        right: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .main-zapis {
+        padding: 40px 24px 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-zapis {
+        overflow: hidden;
+        padding: 40px 24px 0;
+
+        h2 {
+            font-family: Manrope;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 120%;
+            letter-spacing: 0%;
+        }
+
+        .subtext {
+            font-family: Manrope;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0%;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        .back-img {
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 10px;
+            margin: 0 auto;
+            width: 100%;
+            height: fit-content;
+        }
+    }
+}

@@ -46,6 +46,34 @@ h2 {
 
 .def_title {
 	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+
+	.button_v2,
+	.button {
+		font-family: Manrope;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		text-align: center;
+		vertical-align: middle;
+		height: 50px;
+		padding: 14px;
+		max-width: 193px;
+	}
+}
+
+@media (max-width: 960px) {
+	.def_title {
+
+		.button_v2,
+		.button {
+			display: none;
+		}
+	}
 }
 
 h1.title {
@@ -437,7 +465,7 @@ button:disabled {
 	transform: translateY(-50%) translateX(100%) rotate(180deg);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1440px) {
 	.sw-btn {
 		display: none;
 	}
@@ -795,4 +823,94 @@ button:disabled {
 		text-align: left;
 	}
 
+}
+
+.for-start-quest {
+	height: 0;
+}
+
+.quest-sect {
+	overflow: hidden;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.quest-title,
+.quest-cont {
+	transition: 0.5s;
+}
+
+.quest-cont {
+	overflow: hidden;
+}
+
+.quest-sect .default {
+	margin: 0;
+}
+
+.tooltip-horizontal-scroll-icon_hand {
+	animation: tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite;
+}
+
+.tooltip-horizontal-scroll-icon_card {
+	animation: tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite;
+}
+
+@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand {
+	0% {
+		transform: translateX(80px) scale(1);
+		opacity: 0;
+	}
+
+	10% {
+		transform: translateX(80px) scale(1);
+		opacity: 1;
+	}
+
+	20%,
+	60% {
+		transform: translateX(175px) scale(0.6);
+		opacity: 1;
+	}
+
+	80% {
+		transform: translateX(5px) scale(0.6);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateX(5px) scale(0.6);
+		opacity: 0;
+	}
+}
+
+@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card {
+
+	0%,
+	60% {
+		transform: translateX(0);
+	}
+
+	80%,
+	to {
+		transform: translateX(-240px);
+	}
+}
+
+.t1004__scroll-icon-wrapper {
+	display: flex;
+	justify-content: end;
+	// margin-bottom: 20px;
+	position: absolute;
+	bottom: 100%;
+	// top: 20px;
+	right: 0;
+	left: auto;
+	z-index: 1;
+}
+
+@media (min-width: 1441px) {
+	.t1004__scroll-icon-wrapper {
+		display: none;
+	}
 }

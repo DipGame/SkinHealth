@@ -43,61 +43,64 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (document.querySelector('.quest')) {
-        const quest = document.querySelector('.quest');
+        const quests = document.querySelectorAll('.quest');
 
-        if (quest.querySelector(".quest-sect .quest-title")) {
-            const titles = quest.querySelectorAll(".quest-sect .quest-title");
+        quests.forEach(quest => {
+            if (quest.querySelector(".quest-sect .quest-title")) {
+                const titles = quest.querySelectorAll(".quest-sect .quest-title");
 
-            titles.forEach((title) => {
-                let sect_check = title.closest(".quest-sect"); // Находим родительский .quest-sect
-                let cont_check = sect_check.querySelector(".quest-cont"); // Находим .quest-cont внутри .quest-sect
+                titles.forEach((title) => {
+                    let sect_check = title.closest(".quest-sect"); // Находим родительский .quest-sect
+                    let cont_check = sect_check.querySelector(".quest-cont"); // Находим .quest-cont внутри .quest-sect
 
-                // Проверяем, существует ли .quest-cont
-                if (cont_check) {
-                    if (sect_check.classList.contains("active")) {
-                        // Вычисляем реальную высоту содержимого
-                        cont_check.style.height = "auto"; // Временно устанавливаем высоту в "auto"
-                        const height = cont_check.scrollHeight; // Получаем высоту содержимого
-                        cont_check.style.height = "0"; // Возвращаем высоту к 0 для анимации
-                        setTimeout(() => {
-                            cont_check.style.height = `${height}px`; // Устанавливаем высоту для анимации
-                        }, 10); // Небольшая задержка для корректной работы браузера
-                    } else {
-                        // Анимируем закрытие
-                        cont_check.style.height = `${cont_check.scrollHeight}px`; // Фиксируем текущую высоту
-                        setTimeout(() => {
-                            cont_check.style.height = "0"; // Уменьшаем высоту до 0
-                        }, 10); // Небольшая задержка для корректной работы браузера
-                    }
-
-                    sect_check.addEventListener('click', () => {
-                        const cont = sect_check.querySelector(".quest-cont"); // Находим .cont внутри .sect
-
-                        // Проверяем, существует ли .quest-cont
-                        if (cont) {
-                            // Переключаем класс active
-                            sect_check.classList.toggle("active");
-
-                            if (sect_check.classList.contains("active")) {
-                                // Вычисляем реальную высоту содержимого
-                                cont.style.height = "auto"; // Временно устанавливаем высоту в "auto"
-                                const height = cont.scrollHeight; // Получаем высоту содержимого
-                                cont.style.height = "0"; // Возвращаем высоту к 0 для анимации
-                                setTimeout(() => {
-                                    cont.style.height = `${height}px`; // Устанавливаем высоту для анимации
-                                }, 10); // Небольшая задержка для корректной работы браузера
-                            } else {
-                                // Анимируем закрытие
-                                cont.style.height = `${cont.scrollHeight}px`; // Фиксируем текущую высоту
-                                setTimeout(() => {
-                                    cont.style.height = "0"; // Уменьшаем высоту до 0
-                                }, 10); // Небольшая задержка для корректной работы браузера
-                            }
+                    // Проверяем, существует ли .quest-cont
+                    if (cont_check) {
+                        if (sect_check.classList.contains("active")) {
+                            // Вычисляем реальную высоту содержимого
+                            cont_check.style.height = "auto"; // Временно устанавливаем высоту в "auto"
+                            const height = cont_check.scrollHeight; // Получаем высоту содержимого
+                            cont_check.style.height = "0"; // Возвращаем высоту к 0 для анимации
+                            setTimeout(() => {
+                                cont_check.style.height = `${height}px`; // Устанавливаем высоту для анимации
+                            }, 10); // Небольшая задержка для корректной работы браузера
+                        } else {
+                            // Анимируем закрытие
+                            cont_check.style.height = `${cont_check.scrollHeight}px`; // Фиксируем текущую высоту
+                            setTimeout(() => {
+                                cont_check.style.height = "0"; // Уменьшаем высоту до 0
+                            }, 10); // Небольшая задержка для корректной работы браузера
                         }
-                    });
-                }
-            });
-        }
+
+                        sect_check.addEventListener('click', () => {
+                            const cont = sect_check.querySelector(".quest-cont"); // Находим .cont внутри .sect
+
+                            // Проверяем, существует ли .quest-cont
+                            if (cont) {
+                                // Переключаем класс active
+                                sect_check.classList.toggle("active");
+
+                                if (sect_check.classList.contains("active")) {
+                                    // Вычисляем реальную высоту содержимого
+                                    cont.style.height = "auto"; // Временно устанавливаем высоту в "auto"
+                                    const height = cont.scrollHeight; // Получаем высоту содержимого
+                                    cont.style.height = "0"; // Возвращаем высоту к 0 для анимации
+                                    setTimeout(() => {
+                                        cont.style.height = `${height}px`; // Устанавливаем высоту для анимации
+                                    }, 10); // Небольшая задержка для корректной работы браузера
+                                } else {
+                                    // Анимируем закрытие
+                                    cont.style.height = `${cont.scrollHeight}px`; // Фиксируем текущую высоту
+                                    setTimeout(() => {
+                                        cont.style.height = "0"; // Уменьшаем высоту до 0
+                                    }, 10); // Небольшая задержка для корректной работы браузера
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
     }
 
     if (document.querySelector('.sect_filt_v1')) {

@@ -1,0 +1,55 @@
+.main-specialists_card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+    // cursor: grab;
+
+    .img {
+        margin-bottom: 5px;
+        aspect-ratio: 400/540;
+        background-size: cover;
+        background-color: #E5E5E5;
+        background-position: center;
+        border-radius: 16px;
+    }
+
+    h3 {
+        font-family: Manrope;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: 0%;
+    }
+
+    .default {
+        margin: 0;
+        padding: 0;
+        font-family: Manrope;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #725E51;
+
+        * {
+            font-family: Manrope;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #725E51;
+        }
+    }
+}
+
+.main-specialists .sw-btn {
+    top: 44%;
+}
+
+@media (max-width: 720px) {
+    .main-specialists_card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
