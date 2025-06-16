@@ -21,7 +21,71 @@
 </head>
 
 <body>
-	<header class="open">
+
+	<div id="load-svg" class="load_svg "><svg class="" id="" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="64px" viewBox="0 0 128 128" xml:space="preserve">
+    <g>
+        <linearGradient id="linear-gradient">
+            <stop offset="0%" stop-color="#EAE7E1"></stop>
+            <stop offset="50%" stop-color="#725E51"></stop>
+        </linearGradient>
+        <path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" fill="url(#linear-gradient)" fill-rule="evenodd"></path>
+        <animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
+    </g>
+</svg></div>
+	<div class="overlay"></div>
+
+	<div id="map-coordinates" class="invise">
+    <div class="coordinate">
+        61.247063, 73.406112
+    </div>
+    <!-- <div class="coordinate-name">
+        <b>test <br>test</b>
+    </div>
+    <div class="coordinate-detail">
+        test
+    </div> -->
+</div>
+	<div class="popupCheck">
+    <div class="popup__container"><svg class="close-btn" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="60" fill="none"></rect>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.5843 30 10 12.4157 12.4157 10 30 27.5843 47.5844 10 50 12.4157 32.4157 30 49.9436 47.5263 47.5263 49.9436 30 32.4157 12.4157 50 10 47.5844 27.5843 30Z" fill="#725E51"></path>
+        </svg>
+        <h2></h2>
+    </div>
+</div>
+	<div class="padding popupForm form-all" id="popup-call-back">
+	<div class="def_div popup-call-back"><svg class="close-btn" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<rect width="60" height="60" fill="none"></rect>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M27.5843 30 10 12.4157 12.4157 10 30 27.5843 47.5844 10 50 12.4157 32.4157 30 49.9436 47.5263 47.5263 49.9436 30 32.4157 12.4157 50 10 47.5844 27.5843 30Z" fill="#0B111F"></path>
+		</svg>
+		<h2> Оставте свои контакты</h2>
+		<form><input type="hidden" name="captcha_token">
+			<input type="hidden" name="url" value="https://advokatkucherov.ru/"> <input type="hidden" name="name-form" value="popup-call-back">
+			<div class="top">
+				<div class="inputs_cont">
+					<div class="input_cont"> <input type="text" name="name" placeholder="Ваше имя"></div>
+					<div class="input_cont"> <input type="text" name="phone" placeholder="+7(999) 999-99-99"></div>
+				</div>
+				<div class="bot">
+					<div class="checkbox checked" data-processing="">
+						<div class="check-box-btn"> <img class="check" src="./img/Checked.svg" alt=""></div>
+						<p> Нажимая на кнопку "Заказать звонок" вы соглашаетесь на <a target="_blank" href="/upload/politica.pdf">условия обработки персональных данных</a></p>
+					</div>
+				</div> <button type="submit" class="button"> Заказать звонок</button>
+			</div>
+		</form>
+	</div>
+</div>
+	<div class="sogl invise">
+    <div class="cont">
+        <p> Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даете&nbsp;<a href="/upload/politica.pdf" target="_blank">согласие на обработку
+                файлов cookie</a>&nbsp;и использование Яндекс.Метрики.</p> <a class="button">Принимаю</a>
+    </div>
+</div>
+	<div class="admin"></div>
+
+	
+	<header class="">
 
     <div class="header_overlay"></div>
 
@@ -722,6 +786,9 @@
                                             и консультации
                                         </a>
                                     </li>
+                                    <a class="button" href="">
+                                        Весь раздел
+                                    </a>
                                 </ul>
                             </div>
                         </li>
@@ -761,11 +828,11 @@
                         <a class="header-social_link" href="">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0_189_8133" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                <mask id="mask0_189_81333" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
                                     y="0" width="24" height="24">
                                     <path d="M23.5383 0.46154H0.461426V23.5385H23.5383V0.46154Z" fill="white" />
                                 </mask>
-                                <g mask="url(#mask0_189_8133)">
+                                <g mask="url(#mask0_189_81333)">
                                     <path
                                         d="M12 1.38495C6.13848 1.38495 1.38452 6.1387 1.38452 12.0002C1.38452 14.2156 2.05387 16.3156 3.3231 18.1156L1.43068 22.2695C1.38452 22.3618 1.4076 22.4541 1.47683 22.5233C1.54606 22.5925 1.63848 22.6156 1.73079 22.5925L6.27694 20.931C7.98464 22.0387 9.96925 22.6156 12 22.6156H12.0231C17.8846 22.6156 22.6385 17.8618 22.6385 12.0002C22.6385 6.1387 17.8616 1.38495 12 1.38495ZM17.9077 16.0848C17.8385 16.2695 17.6769 16.4772 17.5846 16.6387C17.3769 16.9156 17.1231 17.1925 16.8923 17.3772C16.8462 17.4233 16.8 17.4464 16.7539 17.4925C16.7077 17.5156 16.6846 17.5387 16.6385 17.5618C16.4539 17.7002 16.2693 17.7925 16.1077 17.8387C15.9923 17.8848 15.8539 17.9079 15.7154 17.9079C15.6693 17.9079 15.6231 17.9079 15.6 17.9079C15.3693 17.9079 15.2308 17.8618 14.9077 17.7464C14.6539 17.631 14.3769 17.5156 14.0769 17.4002L14.0077 17.3541C13.7539 17.2387 13.5 17.1002 13.2462 16.9848L13.1539 16.9156C12.9 16.7772 12.6693 16.6387 12.4385 16.5002L12.3923 16.4541C10.8 15.4618 9.46156 14.2618 8.30771 12.7618C8.19233 12.6233 8.10002 12.4848 7.98464 12.3464C7.93848 12.2772 7.89233 12.2079 7.84617 12.1387L7.70771 11.931C7.61541 11.7925 7.54617 11.6772 7.45387 11.5387L7.43079 11.5156C7.36156 11.3772 7.26925 11.2618 7.20002 11.1233C7.20002 11.1233 7.17694 11.1002 7.17694 11.0772C6.80771 10.431 6.48464 9.76177 6.25387 9.11562C6.00002 8.42331 5.93079 7.98485 6.20771 7.50023C6.3231 7.29254 6.76156 6.87716 7.06156 6.66946C7.59233 6.27716 7.8231 6.1387 8.05387 6.09254C8.2154 6.06946 8.46925 6.06946 8.65387 6.1387C8.74617 6.16177 8.86156 6.231 8.93079 6.27716C9.36925 6.55408 10.3846 7.86946 10.7077 8.49254C10.9385 8.90793 10.9846 9.231 10.9154 9.48485C10.8462 9.76177 10.6846 9.92331 10.2231 10.2695C10.1308 10.3618 10.0154 10.431 9.94618 10.5002C9.9231 10.5233 9.9231 10.5233 9.90002 10.5464L9.87695 10.5695C9.83079 10.6156 9.80771 10.7541 9.80771 10.8464C9.80771 11.0772 9.96925 11.6079 10.2462 12.0233C10.4539 12.3464 10.8 12.7618 11.1693 13.0848C11.5846 13.4541 11.9539 13.7079 12.3693 13.9156C12.8539 14.1464 13.1539 14.2156 13.3154 14.1464C13.3385 14.1233 13.3846 14.1233 13.4077 14.1002C13.4539 14.0541 13.5462 13.9387 13.7077 13.7541C13.9385 13.4541 14.0539 13.3387 14.2385 13.2464C14.2846 13.2233 14.3539 13.2002 14.4 13.1772C14.7231 13.0618 15.0693 13.0848 15.3923 13.2695C15.6231 13.3848 16.0846 13.6618 16.3846 13.8695C16.7539 14.1233 17.6308 14.8156 17.7693 14.9772C17.9077 15.1387 18 15.3464 18 15.5772C18.0231 15.7156 17.9769 15.9002 17.9077 16.0848Z"
                                         fill="#725E51" />
@@ -795,7 +862,7 @@
                             </svg>
 
                         </a>
-                        <a class="button">
+                        <a data-popup-open="popup-call-back" class="button">
                             Онлайн-запись
                         </a>
                     </div>
@@ -811,6 +878,70 @@
 	</main>
 	<footer class="padding flex flex-direct">
     <div class="def_div footer-container">
+
+        <div class="footer-help_continaer ">
+            <div class="footer-left_cont ">
+                <a class="footer-logo" href="/">
+                    <img src="./img/logo-white.svg" alt="logo">
+                </a>
+                <div class="footer-adress_cont">
+                    <p class="adress">
+                        г. Сургут, пр. Ленина, 18
+                    </p>
+                    <p class="time">
+                        Ежедневно с 9:00 до 21:00
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-right_cont ">
+                <a href="tel:+73462983398" class="footer-phone">
+                    +7 (3462) 98-33-98
+                </a>
+                <div class="cont_1">
+                    <a class="header-social_link" href="">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_189_8133" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="24" height="24">
+                                <path d="M23.5383 0.46154H0.461426V23.5385H23.5383V0.46154Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_189_8133)">
+                                <path
+                                    d="M12 1.38495C6.13848 1.38495 1.38452 6.1387 1.38452 12.0002C1.38452 14.2156 2.05387 16.3156 3.3231 18.1156L1.43068 22.2695C1.38452 22.3618 1.4076 22.4541 1.47683 22.5233C1.54606 22.5925 1.63848 22.6156 1.73079 22.5925L6.27694 20.931C7.98464 22.0387 9.96925 22.6156 12 22.6156H12.0231C17.8846 22.6156 22.6385 17.8618 22.6385 12.0002C22.6385 6.1387 17.8616 1.38495 12 1.38495ZM17.9077 16.0848C17.8385 16.2695 17.6769 16.4772 17.5846 16.6387C17.3769 16.9156 17.1231 17.1925 16.8923 17.3772C16.8462 17.4233 16.8 17.4464 16.7539 17.4925C16.7077 17.5156 16.6846 17.5387 16.6385 17.5618C16.4539 17.7002 16.2693 17.7925 16.1077 17.8387C15.9923 17.8848 15.8539 17.9079 15.7154 17.9079C15.6693 17.9079 15.6231 17.9079 15.6 17.9079C15.3693 17.9079 15.2308 17.8618 14.9077 17.7464C14.6539 17.631 14.3769 17.5156 14.0769 17.4002L14.0077 17.3541C13.7539 17.2387 13.5 17.1002 13.2462 16.9848L13.1539 16.9156C12.9 16.7772 12.6693 16.6387 12.4385 16.5002L12.3923 16.4541C10.8 15.4618 9.46156 14.2618 8.30771 12.7618C8.19233 12.6233 8.10002 12.4848 7.98464 12.3464C7.93848 12.2772 7.89233 12.2079 7.84617 12.1387L7.70771 11.931C7.61541 11.7925 7.54617 11.6772 7.45387 11.5387L7.43079 11.5156C7.36156 11.3772 7.26925 11.2618 7.20002 11.1233C7.20002 11.1233 7.17694 11.1002 7.17694 11.0772C6.80771 10.431 6.48464 9.76177 6.25387 9.11562C6.00002 8.42331 5.93079 7.98485 6.20771 7.50023C6.3231 7.29254 6.76156 6.87716 7.06156 6.66946C7.59233 6.27716 7.8231 6.1387 8.05387 6.09254C8.2154 6.06946 8.46925 6.06946 8.65387 6.1387C8.74617 6.16177 8.86156 6.231 8.93079 6.27716C9.36925 6.55408 10.3846 7.86946 10.7077 8.49254C10.9385 8.90793 10.9846 9.231 10.9154 9.48485C10.8462 9.76177 10.6846 9.92331 10.2231 10.2695C10.1308 10.3618 10.0154 10.431 9.94618 10.5002C9.9231 10.5233 9.9231 10.5233 9.90002 10.5464L9.87695 10.5695C9.83079 10.6156 9.80771 10.7541 9.80771 10.8464C9.80771 11.0772 9.96925 11.6079 10.2462 12.0233C10.4539 12.3464 10.8 12.7618 11.1693 13.0848C11.5846 13.4541 11.9539 13.7079 12.3693 13.9156C12.8539 14.1464 13.1539 14.2156 13.3154 14.1464C13.3385 14.1233 13.3846 14.1233 13.4077 14.1002C13.4539 14.0541 13.5462 13.9387 13.7077 13.7541C13.9385 13.4541 14.0539 13.3387 14.2385 13.2464C14.2846 13.2233 14.3539 13.2002 14.4 13.1772C14.7231 13.0618 15.0693 13.0848 15.3923 13.2695C15.6231 13.3848 16.0846 13.6618 16.3846 13.8695C16.7539 14.1233 17.6308 14.8156 17.7693 14.9772C17.9077 15.1387 18 15.3464 18 15.5772C18.0231 15.7156 17.9769 15.9002 17.9077 16.0848Z"
+                                    fill="#D9D0C1" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a class="header-social_link" href="">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.2065 0.896603C21.4991 1.12599 21.6296 1.48633 21.545 1.83204L17.9357 16.5868C17.8568 16.9086 17.6033 17.1698 17.2653 17.2772C16.9275 17.3846 16.5533 17.3228 16.2767 17.1138L11.56 13.5516L9.58123 16.8394C9.37873 17.176 8.97643 17.3668 8.56198 17.3228C8.14764 17.279 7.80271 17.0089 7.68819 16.6386L5.79841 10.5334L1.2587 9.69523C0.812077 9.61265 0.476961 9.26964 0.434256 8.85092C0.391563 8.43242 0.651427 8.03754 1.07353 7.87948L20.1516 0.740116C20.5075 0.607028 20.9138 0.667328 21.2065 0.896603ZM5.03611 8.45109L6.81946 8.78027C7.19814 8.85013 7.50268 9.10944 7.60876 9.45223L8.98734 13.9059L10.3564 11.6311C10.5049 11.3846 10.7639 11.2115 11.0642 11.1585C11.3642 11.1055 11.6743 11.1781 11.9109 11.3567L16.2914 14.665L19.0987 3.18857L5.03611 8.45109Z"
+                                fill="#D9D0C1" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.0885 2.42853C21.5408 2.16573 21.7005 1.62775 21.4568 1.18889C21.2132 0.749913 20.6467 0.555514 20.1516 0.740801L1.07353 7.88028C0.651427 8.03811 0.391563 8.43299 0.434256 8.8516C0.476961 9.27021 0.812077 9.61345 1.2587 9.6958L6.41503 10.6478C6.674 10.6956 6.9431 10.6498 7.16664 10.5199L21.0885 2.42853Z"
+                                fill="#D9D0C1" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.5451 1.83251C21.6504 1.40186 21.4211 0.960857 20.9914 0.767357C20.5615 0.573744 20.0439 0.678369 19.741 1.02003L10.4598 11.4912C10.099 11.8981 10.164 12.4978 10.6049 12.8307L16.2767 17.1144C16.5533 17.3233 16.9275 17.3852 17.2654 17.2777C17.6033 17.1704 17.8569 16.9091 17.9357 16.5873L21.5451 1.83251Z"
+                                fill="#D9D0C1" />
+                        </svg>
+                    </a>
+                    <a class="header-social_link for-mob" href="">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.8932 12C4.05996 12 0.162399 7.49549 0 0H3.42286C3.53529 5.5015 6.05871 7.83183 8.05746 8.31231V0H11.2804V4.74474C13.2542 4.54054 15.3279 2.37838 16.0275 0H19.2505C18.9869 1.23349 18.4614 2.40142 17.7069 3.43072C16.9524 4.46001 15.9852 5.32854 14.8657 5.98198C16.1153 6.57905 17.2191 7.42414 18.1041 8.4615C18.9891 9.49885 19.6353 10.7049 20 12H16.4522C16.1248 10.8751 15.4594 9.86812 14.5394 9.10528C13.6194 8.34244 12.4858 7.85766 11.2804 7.71171V12H10.8932Z"
+                                fill="#D9D0C1" />
+                        </svg>
+
+                    </a>
+
+                </div>
+                <a data-popup-open="popup-call-back" class="button">
+                    Онлайн-запись
+                </a>
+            </div>
+
+        </div>
+
         <div class="footer-top_container">
             <div class="footer-left_cont">
                 <a class="footer-logo" href="/">
@@ -825,8 +956,8 @@
                     </p>
                 </div>
             </div>
-            <div class="footer-menu footer-check-height-cont">
-                <div data-id="0" class="footer-menu_cont footer-check-height overflow-hidden-bottom">
+            <div class="footer-menu footer-check-height-cont ">
+                <div class="footer-menu_cont open">
                     <div class="cont">
                         <a class="footer-menu_title active" href="">
                             Услуги
@@ -836,7 +967,7 @@
                                 stroke-opacity="0.5" />
                         </svg>
                     </div>
-                    <ul>
+                    <ul data-id="0" class="footer-check-height ">
                         <li class="active">
                             <a href="">
                                 Инъекционная косметология
@@ -892,21 +1023,21 @@
                                 Удаление новообразований
                             </a>
                         </li>
-                        <div data-id="0" class="more-height">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path
-                                        d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
-                                        fill="#0B111F"></path>
-                                </g>
-                            </svg>
-                        </div>
-                    </ul>
 
+                    </ul>
+                    <div data-id="0" class="more-height invise">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                                    fill="#0B111F"></path>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
-                <div data-id="1" class="footer-menu_cont footer-check-height overflow-hidden-bottom">
+                <div class="footer-menu_cont ">
                     <div class="cont">
                         <a class="footer-menu_title">
                             Пациентам
@@ -916,7 +1047,7 @@
                                 stroke-opacity="0.5" />
                         </svg>
                     </div>
-                    <ul>
+                    <ul data-id="1" class="footer-check-height ">
                         <li class="active">
                             <a href="">
                                 Услуги
@@ -949,7 +1080,7 @@
                         </li>
 
                     </ul>
-                    <div data-id="0" class="more-height">
+                    <div data-id="1" class="more-height invise">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -961,7 +1092,7 @@
                         </svg>
                     </div>
                 </div>
-                <div data-id="2" class="footer-menu_cont footer-check-height overflow-hidden-bottom">
+                <div class="footer-menu_cont ">
                     <div class="cont">
                         <a class="footer-menu_title">
                             Клиника
@@ -971,7 +1102,7 @@
                                 stroke-opacity="0.5" />
                         </svg>
                     </div>
-                    <ul>
+                    <ul data-id="2" class="footer-check-height ">
                         <li class="active">
                             <a href="">
                                 О нас
@@ -993,7 +1124,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div data-id="2" class="more-height">
+                    <div data-id="2" class="more-height invise">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -1047,13 +1178,19 @@
                     </a>
 
                 </div>
-                <a class="button">
+                <a data-popup-open="popup-call-back" class="button">
                     Онлайн-запись
                 </a>
             </div>
         </div>
         <div class="footer-map_container" id="map">
 
+        </div>
+
+        <div class="footer-bottom_container">
+            <p class="text">
+                ©2025 Клиника косметологии Кожа. Все права защищены.
+            </p>
         </div>
     </div>
 </footer>
