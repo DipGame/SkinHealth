@@ -1,0 +1,167 @@
+.main-form {
+    padding: 40px;
+    position: relative;
+    border-radius: 16px;
+    background-color: #D9D0C1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-image: url("./../img/Mask group.svg");
+    background-position: 100%;
+    background-size: 50% auto;
+    overflow: hidden;
+
+    .back {
+        aspect-ratio: 1/1;
+        max-width: 480px;
+        object-fit: contain;
+        object-position: center;
+        margin-top: auto;
+        position: absolute;
+        left: auto;
+        right: 30px;
+        bottom: 0;
+    }
+
+    @media (max-width: 960px) {
+        .back {
+            right: -150px;
+        }
+    }
+
+
+
+    .left {
+        max-width: 600px;
+
+        h2 {
+            font-family: Manrope;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtext {
+            font-family: Manrope;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: 0%;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+            color: #6C5444;
+        }
+
+        .inputs_cont {
+            max-width: 460px;
+            margin-bottom: 25px;
+            background-color: #FEFCFA;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+
+            input {
+                padding: 0 20px;
+                width: 100%;
+                font-family: Manrope;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #6C5444;
+                height: 50px;
+                border-bottom: 1px solid #725E51;
+            }
+
+            .err {
+
+                input {
+                    color: #a73333;
+
+                    &::placeholder {
+                        color: #a73333;
+                    }
+                }
+            }
+
+            textarea {
+                padding: 15px 20px;
+                width: 100%;
+                font-family: Manrope;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #6C5444;
+                height: 96px;
+                max-height: 96px;
+                resize: none;
+                outline: none;
+            }
+        }
+
+        [type=submit] {
+            max-width: 136px;
+            height: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .checkbox {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .main-form {
+        background-image: none;
+
+        .back {
+            display: none;
+        }
+    }
+
+    .main-form .left .inputs_cont {
+        max-width: none;
+        width: 100%;
+    }
+
+    .main-form .left {
+        max-width: none;
+        width: 100%;
+    }
+
+    .checkbox.v2 p {
+        max-width: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-form {
+        padding: 40px 20px;
+
+        .left {
+            h2 {
+                font-family: Manrope;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 120%;
+                letter-spacing: 0%;
+            }
+
+            .subtext {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

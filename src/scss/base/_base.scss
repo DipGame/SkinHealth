@@ -64,6 +64,40 @@ h2 {
 		padding: 14px;
 		max-width: 193px;
 	}
+
+	.subtext {
+		font-family: Manrope;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		letter-spacing: 0%;
+		color: #725E51;
+		max-width: 460px;
+	}
+
+	&.v2 {
+		align-items: start;
+		flex-wrap: wrap;
+
+		@media (max-width: 500px) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.button_v2,
+.button {
+	&.v3 {
+		max-width: 171px;
+		height: 50px;
+		font-family: Manrope;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		text-align: center;
+		margin: 40px auto 0;
+	}
 }
 
 @media (max-width: 960px) {
@@ -720,6 +754,18 @@ button:disabled {
 	line-height: 1;
 }
 
+.checkbox {
+	.check {
+		display: none;
+	}
+
+
+	&.checked {
+		.check {
+			display: block;
+		}
+	}
+}
 
 .popupForm .check-box-btn img {
 	max-width: 17px;
@@ -912,5 +958,92 @@ button:disabled {
 @media (min-width: 1441px) {
 	.t1004__scroll-icon-wrapper {
 		display: none;
+	}
+}
+
+[data-check-lines] {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+	&.opened {
+		display: block;
+	}
+}
+
+.button-more {
+	font-family: Manrope;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 140%;
+	letter-spacing: 0%;
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-offset: 50%;
+	text-decoration-thickness: 3%;
+	text-decoration-skip-ink: auto;
+	color: #725E51;
+	cursor: pointer;
+	transition: .5s;
+
+	&:hover {
+		opacity: .7;
+	}
+}
+
+.checkbox.v2 {
+	margin-top: 15px;
+	display: flex;
+	gap: 15px;
+
+	.check-box-btn {
+		border: 1px solid #6C5444;
+		max-width: 20px;
+		max-height: 20px;
+		min-height: 20px;
+		min-width: 20px;
+		border-radius: 2px;
+		cursor: pointer;
+	
+		.check {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&.checked {
+		.check-box-btn {
+			border: none;
+		}
+	}
+
+	&.err {
+		.check-box-btn {
+			border: 1px solid #a73333;
+		}
+	}
+
+	p {
+		font-family: Manrope;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		color: #8B7872;
+		max-width: 362px;
+
+		* {
+			font-family: Manrope;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 100%;
+			letter-spacing: 0%;
+			color: #8B7872;
+		}
+
+		a {
+			text-decoration: underline;
+		}
 	}
 }

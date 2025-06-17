@@ -175,6 +175,51 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    if (document.querySelector('[data-check-lines]')) {
+        const checkLinesElements = document.querySelectorAll('[data-check-lines]');
+
+        checkLinesElements.forEach(el => {
+            let lineHeight = parseInt(window.getComputedStyle(el).lineHeight); // Определяем высоту строки
+            let lineCount = Math.ceil(el.scrollHeight / lineHeight) - 1; // Делим полную высоту на высоту строки для подсчёта их числа 🧮
+
+            let dataCheckLines = el.getAttribute("data-check-lines");
+            let dataId = el.getAttribute("data-id");
+            let buttonMore = document.querySelector(`.button-more[data-id="${dataId}"]`);
+            let buttonMoreText = buttonMore.textContent.trim();
+
+            if (dataCheckLines && lineCount > dataCheckLines) {
+                removeClass(buttonMore, 'invise');
+
+                el.setAttribute("style", `-webkit-line-clamp: ${dataCheckLines}`);
+
+                buttonMore.addEventListener('click', () => {
+                    if (el.classList.contains("opened")) {
+                        removeClass(el, 'opened');
+                        buttonMore.textContent = buttonMoreText;
+                    } else {
+                        addClass(el, 'opened');
+                        buttonMore.textContent = "Скрыть";
+                    }
+                })
+            } else if (lineCount > 2) {
+                removeClass(buttonMore, 'invise');
+
+                buttonMore.addEventListener('click', () => {
+                    if (el.classList.contains("opened")) {
+                        removeClass(el, 'opened');
+                        buttonMore.textContent = buttonMoreText;
+                    } else {
+                        addClass(el, 'opened');
+                        buttonMore.textContent = "Скрыть";
+                    }
+                })
+            }
+        });
+    }
+
+
+
+
     if (document.querySelector('[data-href]')) {
         const data_href = document.querySelectorAll('[data-href]');
 
@@ -475,7 +520,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let checkBoxBtn = formSect.querySelector("[data-processing]");
 
             if (checkBoxBtn) {
-                addClass(checkBoxBtn, 'checked');
+                // addClass(checkBoxBtn, 'checked');
             }
 
             if (formSect.classList.contains('popupForm')) {

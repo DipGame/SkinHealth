@@ -1,0 +1,62 @@
+.main-about_section {
+    background-color: #E4E2DE;
+}
+
+.main-about {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-about_top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 45px;
+
+    .default {
+        margin: 0;
+        padding: 0;
+        color: #725E51;
+
+        * {
+            color: #725E51;
+        }
+    }
+
+    .right {
+        max-width: 400px;
+    }
+
+    .left {
+        max-width: 720px;
+    }
+}
+
+.swiperGallery {
+    img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 960px) {
+    .main-about_top {
+        flex-direction: column;
+
+        * {
+            max-width: none !important;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .main-about_card {
+        max-width: 285px;
+
+        img {
+            border-radius: 0;
+        }
+    }
+}

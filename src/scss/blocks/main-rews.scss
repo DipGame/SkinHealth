@@ -1,0 +1,18 @@
+.main-rews_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    div {
+        width: -webkit-fill-available;
+        max-width: 750px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .main-rews_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

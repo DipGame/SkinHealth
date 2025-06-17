@@ -12,10 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         loop: true,
         slidesPerView: 1,
-        // navigation: {
-        //     nextEl: ".swiper-button-next-slider_2",
-        //     prevEl: ".swiper-button-prev-slider_2",
-        // },
         pagination: {
             el: ".swiperBaner-pagination",
             clickable: true,
@@ -23,13 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     let swiperSpecialists = new Swiper(".swiperSpecialists", {
         speed: 1000,
-        // loop: true,
+        loop: false,
         spaceBetween: 20,
         slidesPerView: "auto",
-        // navigation: {
-        //     nextEl: ".swiper-button-next-slider_2",
-        //     prevEl: ".swiper-button-prev-slider_2",
-        // },
         navigation: {
             nextEl: ".main-specialists .sw-btn-next",
             prevEl: ".main-specialists .sw-btn-prev",
@@ -37,17 +29,59 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             721: {
                 slidesPerView: 2,
-                spaceBetween: 30
+                spaceBetween: 30,
+                loop: true,
             },
             961: {
                 slidesPerView: 3,
-                spaceBetween: 40
+                spaceBetween: 40,
+                loop: true,
             },
-            // 1044: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 30
-            // },
-            
+        }
+    });
+    let swiperDocsWorks = new Swiper(".swiperDocsWorks", {
+        speed: 1000,
+        loop: true,
+        spaceBetween: 20,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".main-works-docs .sw-btn-next",
+            prevEl: ".main-works-docs .sw-btn-prev",
+        },
+        breakpoints: {
+            721: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                loop: true,
+            },
+            961: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                loop: true,
+            },
+        }
+    });
+    let swiperGallery = new Swiper(".swiperGallery", {
+        speed: 1000,
+        loop: false,
+        spaceBetween: 20,
+        slidesPerView: "auto",
+        navigation: {
+            nextEl: ".main-about .sw-btn-next",
+            prevEl: ".main-about .sw-btn-prev",
+        },
+        breakpoints: {
+            501: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                loop: true,
+            },
+            961: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+                loop: true,
+            },
         }
     });
 

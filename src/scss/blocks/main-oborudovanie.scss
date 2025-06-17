@@ -1,0 +1,104 @@
+.main-oborudovanie_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.main-oborudovanie_card {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 8px;
+    transition: .5s;
+
+    &:hover {
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+        .cont h3 {
+            color: #725E51;
+        }
+    }
+
+    .imgs {
+        display: flex;
+        justify-content: space-between;
+        gap: 6px;
+        padding: 10px;
+        aspect-ratio: 620/420;
+
+        .img {
+            height: 100%;
+            width: -webkit-fill-available;
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+        }
+    }
+
+    .cont {
+        padding: 20px 40px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h3 {
+            font-family: Manrope;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: 0px;
+            color: #0D1011;
+            transition: .5s;
+        }
+
+        .default {
+            margin: 0;
+            padding: 0;
+            font-family: Manrope;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: 0px;
+            color: #725E51;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            * {
+                font-family: Manrope;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                letter-spacing: 0px;
+                color: #725E51;
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .main-oborudovanie_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .main-oborudovanie_grid {
+        gap: 20px;
+    }
+
+    .main-oborudovanie_card {
+
+        .imgs {
+            aspect-ratio: 343/233;
+        }
+
+        .cont {
+            padding: 10px 20px 20px;
+        }
+    }
+}

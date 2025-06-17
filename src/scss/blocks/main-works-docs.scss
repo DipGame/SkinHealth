@@ -1,0 +1,103 @@
+.main-works-docs_card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+
+    .img {
+        margin-bottom: 8px;
+        aspect-ratio: 414/362;
+        background-size: cover;
+        background-color: #E5E5E5;
+        background-position: center;
+        border-radius: 8px;
+    }
+
+    h3 {
+        font-family: Manrope;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    .default {
+        margin: 0;
+        padding: 0;
+        font-family: Manrope;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        color: #725E51;
+
+        * {
+            font-family: Manrope;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: 0%;
+            color: #725E51;
+        }
+    }
+
+    .button-more {
+        position: relative;
+        bottom: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-works-docs_section {
+        padding: 0;
+
+    }
+
+    .main-works-docs {
+        width: 100%;
+        max-width: 100%;
+
+        .def_title {
+            padding: 0 16px;
+        }
+
+        .t1004__scroll-icon-wrapper {
+            right: 16px;
+        }
+    }
+
+    .main-works-docs_card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .swiperDocsWorks {
+        padding: 0 16px;
+    }
+
+    .main-works-docs_card h3 {
+        font-family: Manrope;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    .main-works-docs_card .default {
+        .default {
+            font-family: Manrope;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            letter-spacing: 0%;
+
+            * {
+                font-family: Manrope;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                letter-spacing: 0%;
+            }
+        }
+    }
+}
