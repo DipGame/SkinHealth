@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стартовый шаблон</title>
+    <link rel="stylesheet" href="./fonts/Jost.css" />
+    <link rel="stylesheet" href="./fonts/Manrope.css" />
+
+    <link rel="stylesheet" href="./css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=2e485074-4e7a-4d9b-9e83-432aa96ddebf&lang=ru_RU"
+        type="text/javascript"></script>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery.fancybox.js"></script>
+    <script src="./js/swiper-bundle.js"></script>
+</head>
+
+<body>
+
+    <div id="load-svg" class="load_svg "><svg class="" id="" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="64px" viewBox="0 0 128 128" xml:space="preserve">
+    <g>
+        <linearGradient id="linear-gradient">
+            <stop offset="0%" stop-color="#EAE7E1"></stop>
+            <stop offset="50%" stop-color="#725E51"></stop>
+        </linearGradient>
+        <path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" fill="url(#linear-gradient)" fill-rule="evenodd"></path>
+        <animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
+    </g>
+</svg></div>
+    <div class="overlay"></div>
+
+    <div id="map-coordinates" class="invise">
+    <div class="coordinate">
+        61.247063, 73.406112
+    </div>
+    <!-- <div class="coordinate-name">
+        <b>test <br>test</b>
+    </div>
+    <div class="coordinate-detail">
+        test
+    </div> -->
+</div>
+    <div class="popupCheck">
+    <div class="popup__container"><svg class="close-btn" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="60" fill="none"></rect>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.5843 30 10 12.4157 12.4157 10 30 27.5843 47.5844 10 50 12.4157 32.4157 30 49.9436 47.5263 47.5263 49.9436 30 32.4157 12.4157 50 10 47.5844 27.5843 30Z" fill="#725E51"></path>
+        </svg>
+        <h2></h2>
+    </div>
+</div>
+    <div class="padding popupForm form-all" id="popup-call-back">
+	<div class="def_div popup-call-back"><svg class="close-btn" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<rect width="60" height="60" fill="none"></rect>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M27.5843 30 10 12.4157 12.4157 10 30 27.5843 47.5844 10 50 12.4157 32.4157 30 49.9436 47.5263 47.5263 49.9436 30 32.4157 12.4157 50 10 47.5844 27.5843 30Z" fill="#0B111F"></path>
+		</svg>
+		<h2> Оставте свои контакты</h2>
+		<form><input type="hidden" name="captcha_token">
+			<input type="hidden" name="url" value="https://test.ru/"> <input type="hidden" name="name-form" value="popup-call-back">
+			<div class="top">
+				<div class="inputs_cont">
+					<div class="input_cont"> <input type="text" name="name" placeholder="Ваше имя"></div>
+					<div class="input_cont"> <input type="text" name="phone" placeholder="+7(999) 999-99-99"></div>
+				</div>
+				<div class="bot">
+					<div class="checkbox checked" data-processing="">
+						<div class="check-box-btn"> <img class="check" src="./img/Checked.svg" alt=""></div>
+						<p> Нажимая на кнопку "Заказать звонок" вы соглашаетесь на <a target="_blank" href="/upload/politica.pdf">условия обработки персональных данных</a></p>
+					</div>
+				</div> <button type="submit" class="button"> Заказать звонок</button>
+			</div>
+		</form>
+	</div>
+</div>
+    <div class="sogl invise">
+    <div class="cont">
+        <p> Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даете&nbsp;<a href="/upload/politica.pdf" target="_blank">согласие на обработку
+                файлов cookie</a>&nbsp;и использование Яндекс.Метрики.</p> <a class="button">Принимаю</a>
+    </div>
+</div>
+    <div class="admin"></div>
+
+
+    <header class="">
+
+    <div class="header_overlay"></div>
+
+    <div class="header-cont">
+        <div class="header-top">
+            <div class="header-top_cont">
+                <div class="header-top_left">
+                    <p class="adress">
+                        г. Сургут, пр. Ленина, 18
+                    </p>
+                    <p class="time">
+                        Ежедневно с 9:00 до 21:00
+                    </p>
+                </div>
+                <div class="header-top_right">
+
+                    <div data-id="search-btn" class="header-search_cont">
+                        <img src="./img/search_1_1.svg" alt="search">
+                        <p>
+                            Поиск по сайту
+                        </p>
+                    </div>
+
+                    <a href="tel:+73462983398" class="header-phone_cont">
+                        <img src="./img/calling_1_1.svg" alt="phone">
+                        <p>
+                            +7 (3462) 98-33-98
+                        </p>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="header-bottom">
+            <div class="header-bottom_cont">
+
+                <div class="header-search" id="title-search">
+                    <form class="header-search_form" action="/search/index.php">
+                        <div class="cont_2">
+                            <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50"
+                                autocomplete="off" placeholder="Поиск по сайту">
+
+                            <div class="cont_32">
+                                <svg class="clear-btn smooth" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" display="none">
+                                    <g clip-path="url(#clip0_254_4927)">
+                                        <path
+                                            d="M9 .5C4.02919.5 0 4.52919 0 9.5 0 14.4708 4.02919 18.5 9 18.5 13.9708 18.5 18 14.4708 18 9.5 17.9854 4.53537 13.9646.514625 9 .5ZM12.7727 12.4773C12.9926 12.6972 12.9926 13.0528 12.7727 13.2727 12.663 13.3824 12.519 13.4375 12.375 13.4375 12.231 13.4375 12.087 13.3824 11.9773 13.2727L9 10.2954 6.02269 13.2727C5.913 13.3824 5.769 13.4375 5.625 13.4375 5.481 13.4375 5.337 13.3824 5.22731 13.2727 5.00738 13.0528 5.00738 12.6972 5.22731 12.4773L8.20463 9.5 5.22731 6.52269C5.00738 6.30275 5.00738 5.94725 5.22731 5.72731 5.44725 5.50738 5.80275 5.50738 6.02269 5.72731L9 8.70463 11.9773 5.72731C12.1972 5.50738 12.5528 5.50738 12.7727 5.72731 12.9926 5.94725 12.9926 6.30275 12.7727 6.52269L9.79537 9.5 12.7727 12.4773Z"
+                                            fill="#0D1011"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_254_4927">
+                                            <rect width="18" height="18" fill="white" transform="translate(0 0.5)">
+                                            </rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <button type="submit">
+                                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M27.3333 27.8621 20 20.5288" stroke="#0D1011" stroke-miterlimit="10"
+                                            stroke-linecap="square"></path>
+                                        <path
+                                            d="M13.3333 23.1955C18.488 23.1955 22.6667 19.0168 22.6667 13.8621 22.6667 8.70748 18.488 4.52881 13.3333 4.52881 8.17868 4.52881 4 8.70748 4 13.8621 4 19.0168 8.17868 23.1955 13.3333 23.1955Z"
+                                            stroke="#0D1011" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="square"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <svg class="close_svg" id="close-btn-search" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g id="Menu / Close_LG">
+                                        <path id="Vector" d="M21 21 12 12 12 12 3 3 12 12 21.0001 3 12 12 3 21.0001"
+                                            stroke="#0D1011" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div class="search_rez">
+                                <ul>
+                                    <li>
+                                        <a href="/stock/skidki-molodozhenam-i-ikh-roditelyam/">Скидки молодоженам и их
+                                            родителям</a>
+                                    </li>
+                                    <li>
+                                        <a href="/stock/vakuumnyy-lpg-massazh-tela/">Вакуумный LPG массаж тела</a>
+                                    </li>
+                                    <li>
+                                        <a href="/stock/kriolipoliz/">Криолиполиз</a>
+                                    </li>
+                                    <li>
+                                        <a href="/equipment/skin-station-mistral/">Skin Station Mistral</a>
+                                    </li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <a class="header-logo" href="/">
+                    <img src="./img/logo.svg" alt="logo">
+                </a>
+
+                <div class="header-right_cont-mob">
+                    <a class="header-btn-search-mob header-social_link" data-id="search-btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_324_20404)">
+                                <path d="M13.3799 13.38L16.6199 16.62" stroke="#0D1011" stroke-opacity="0.7"
+                                    stroke-width="1.08" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M15.3799 8.38C15.3799 4.51401 12.2459 1.38 8.37988 1.38C4.51389 1.38 1.37988 4.51401 1.37988 8.38C1.37988 12.246 4.51389 15.38 8.37988 15.38C12.2459 15.38 15.3799 12.246 15.3799 8.38Z"
+                                    stroke="#0D1011" stroke-opacity="0.7" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_324_20404">
+                                    <rect width="18" height="18" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+
+                    <a class="header-menu-burger header-social_link">
+                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 0.875H21M1 7.125H21" stroke="#725E51" stroke-linecap="round" />
+                        </svg>
+                    </a>
+                </div>
+
+
+                <div class="header-mob_cont ">
+
+                    <div class="header-mob-top_cont">
+                        <a class="header-logo" href="/">
+                            <img src="./img/logo.svg" alt="logo">
+                        </a>
+                        <a class="header-menu-close header-social_link">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.00001 9L17.4853 0.514723M9.00001 9L0.514726 17.4853M9.00001 9L17.4853 17.4853M9.00001 9L0.514718 0.514716"
+                                    stroke="#725E51" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <ul class="header-menu header-menu-level-1">
+                        <li class="drop_1 first_link active menu-services">
+                            <div data-href="/" class="cont">
+                                <a href="/" class="level-1">
+                                    Услуги
+                                </a>
+                                <svg width="8" height="4" viewBox="0 0 8 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.06299 0.5L4.06299 3.5L1.06299 0.5" stroke="#0D1011" stroke-opacity="0.7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="header-menu-level-2_cont ">
+                                <ul class="header-menu-level-2">
+                                    <li class="drop_2 active ">
+                                        <a class="level-2" href="/">
+                                            Осмотры
+                                            и консультации
+                                        </a>
+
+                                        <div class="header-menu-level-3_cont ">
+                                            <h3>
+                                                Осмотры и консультации
+                                            </h3>
+                                            <div class="header-menu-level-3_flex">
+                                                <div class="help-cont ">
+                                                    <h3>
+                                                        Ботулинотерапия
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Ботулинотерапия
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="/">
+                                                                Миотокс
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Xeomin
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Disport
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Ботокс для лица и вокруг глаз
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Ботулинотерапия в лоб и межбровье
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Ботокс для шеи и зоны декольте
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="help-cont">
+                                                    <h3>
+                                                        Контурная пластика
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Контурная пластика
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Увеличение губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика лица
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Объемное моделирование (скулы, подбородок)
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Коррекция носослезной борозды
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Бланширование
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="help-cont">
+                                                    <h3>
+                                                        Контурная пластика
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Контурная пластика
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Увеличение губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика лица
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Объемное моделирование (скулы, подбородок)
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Коррекция носослезной борозды
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Бланширование
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="help-cont">
+                                                    <h3>
+                                                        Контурная пластика
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Контурная пластика
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Увеличение губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика лица
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Объемное моделирование (скулы, подбородок)
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Коррекция носослезной борозды
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Бланширование
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="help-cont">
+                                                    <h3>
+                                                        Контурная пластика
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Контурная пластика
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Увеличение губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика лица
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Объемное моделирование (скулы, подбородок)
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Коррекция носослезной борозды
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Бланширование
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <a class="button" href="">
+                                                    Весь раздел
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="drop_2 active ">
+                                        <a class="level-2" href="/">
+                                            IV-терапия капельницы
+                                        </a>
+
+                                        <div class="header-menu-level-3_cont">
+                                            <h3>
+                                                IV-терапия капельницы
+                                            </h3>
+                                            <div class="header-menu-level-3_flex">
+                                                <div class="help-cont ">
+                                                    <h3>
+                                                        Ботулинотерапия
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Ботулинотерапия
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Миотокс
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Xeomin
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Disport
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Ботокс для лица и вокруг глаз
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Ботулинотерапия в лоб и межбровье
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Ботокс для шеи и зоны декольте
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="help-cont">
+                                                    <h3>
+                                                        Контурная пластика
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Контурная пластика
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Увеличение губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика лица
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Объемное моделирование (скулы, подбородок)
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Коррекция носослезной борозды
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Бланширование
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="help-cont">
+                                                    <h3>
+                                                        Контурная пластика
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Контурная пластика
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Увеличение губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика лица
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Объемное моделирование (скулы, подбородок)
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Коррекция носослезной борозды
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Бланширование
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="help-cont">
+                                                    <h3>
+                                                        Контурная пластика
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Контурная пластика
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Увеличение губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика лица
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Объемное моделирование (скулы, подбородок)
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Коррекция носослезной борозды
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Бланширование
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <div class="help-cont">
+                                                    <h3>
+                                                        Контурная пластика
+                                                    </h3>
+                                                    <ul class="header-menu-level-3">
+                                                        <li class="section-name">
+                                                            <a class="level-3" href="/">
+                                                                Контурная пластика
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Увеличение губ
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Контурная пластика лица
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Объемное моделирование (скулы, подбородок)
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Коррекция носослезной борозды
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="level-3" href="">
+                                                                Бланширование
+                                                            </a>
+                                                        </li>
+                                                        <a class="button" href="">
+                                                            Весь раздел
+                                                        </a>
+                                                    </ul>
+                                                </div>
+                                                <a class="button" href="">
+                                                    Весь раздел
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="drop_1 first_link version_2">
+                            <div class="cont">
+                                <a class="level-1">
+                                    Решить проблему
+                                </a>
+                                <svg width="8" height="4" viewBox="0 0 8 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.06299 0.5L4.06299 3.5L1.06299 0.5" stroke="#0D1011" stroke-opacity="0.7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="header-menu-level-2_cont">
+                                <h3>
+                                    Решить проблему
+                                </h3>
+                                <ul class="header-menu-level-2">
+                                    <li class="no-drop">
+                                        <a class="level-2" href="/">
+                                            Осмотры
+                                            и консультации
+                                        </a>
+                                    </li>
+                                    <li class="no-drop">
+                                        <a class="level-2" href="/">
+                                            Осмотры
+                                            и консультации
+                                        </a>
+                                    </li>
+                                    <li class="no-drop">
+                                        <a class="level-2" href="/">
+                                            Осмотры
+                                            и консультации
+                                        </a>
+                                    </li>
+                                    <li class="no-drop">
+                                        <a class="level-2" href="/">
+                                            Осмотры
+                                            и консультации
+                                        </a>
+                                    </li>
+                                    <li class="no-drop">
+                                        <a class="level-2" href="/">
+                                            Осмотры
+                                            и консультации
+                                        </a>
+                                    </li>
+                                    <a class="button" href="">
+                                        Весь раздел
+                                    </a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="first_link">
+                            <a href="/" class="level-1">
+                                О клинике
+                            </a>
+                        </li>
+                        <li class="first_link">
+                            <a class="level-1">
+                                Цены
+                            </a>
+                        </li>
+                        <li class="first_link">
+                            <a class="level-1">
+                                Наши работы
+                            </a>
+                        </li>
+                        <li class="active first_link">
+                            <a class="level-1">
+                                Акции
+                            </a>
+                        </li>
+                        <li class="first_link">
+                            <a class="level-1">
+                                Сертификаты
+                            </a>
+                        </li>
+                        <li class="first_link">
+                            <a class="level-1">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="header-bottom_right">
+                        <a class="header-social_link" href="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_189_81333" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="24" height="24">
+                                    <path d="M23.5383 0.46154H0.461426V23.5385H23.5383V0.46154Z" fill="white" />
+                                </mask>
+                                <g mask="url(#mask0_189_81333)">
+                                    <path
+                                        d="M12 1.38495C6.13848 1.38495 1.38452 6.1387 1.38452 12.0002C1.38452 14.2156 2.05387 16.3156 3.3231 18.1156L1.43068 22.2695C1.38452 22.3618 1.4076 22.4541 1.47683 22.5233C1.54606 22.5925 1.63848 22.6156 1.73079 22.5925L6.27694 20.931C7.98464 22.0387 9.96925 22.6156 12 22.6156H12.0231C17.8846 22.6156 22.6385 17.8618 22.6385 12.0002C22.6385 6.1387 17.8616 1.38495 12 1.38495ZM17.9077 16.0848C17.8385 16.2695 17.6769 16.4772 17.5846 16.6387C17.3769 16.9156 17.1231 17.1925 16.8923 17.3772C16.8462 17.4233 16.8 17.4464 16.7539 17.4925C16.7077 17.5156 16.6846 17.5387 16.6385 17.5618C16.4539 17.7002 16.2693 17.7925 16.1077 17.8387C15.9923 17.8848 15.8539 17.9079 15.7154 17.9079C15.6693 17.9079 15.6231 17.9079 15.6 17.9079C15.3693 17.9079 15.2308 17.8618 14.9077 17.7464C14.6539 17.631 14.3769 17.5156 14.0769 17.4002L14.0077 17.3541C13.7539 17.2387 13.5 17.1002 13.2462 16.9848L13.1539 16.9156C12.9 16.7772 12.6693 16.6387 12.4385 16.5002L12.3923 16.4541C10.8 15.4618 9.46156 14.2618 8.30771 12.7618C8.19233 12.6233 8.10002 12.4848 7.98464 12.3464C7.93848 12.2772 7.89233 12.2079 7.84617 12.1387L7.70771 11.931C7.61541 11.7925 7.54617 11.6772 7.45387 11.5387L7.43079 11.5156C7.36156 11.3772 7.26925 11.2618 7.20002 11.1233C7.20002 11.1233 7.17694 11.1002 7.17694 11.0772C6.80771 10.431 6.48464 9.76177 6.25387 9.11562C6.00002 8.42331 5.93079 7.98485 6.20771 7.50023C6.3231 7.29254 6.76156 6.87716 7.06156 6.66946C7.59233 6.27716 7.8231 6.1387 8.05387 6.09254C8.2154 6.06946 8.46925 6.06946 8.65387 6.1387C8.74617 6.16177 8.86156 6.231 8.93079 6.27716C9.36925 6.55408 10.3846 7.86946 10.7077 8.49254C10.9385 8.90793 10.9846 9.231 10.9154 9.48485C10.8462 9.76177 10.6846 9.92331 10.2231 10.2695C10.1308 10.3618 10.0154 10.431 9.94618 10.5002C9.9231 10.5233 9.9231 10.5233 9.90002 10.5464L9.87695 10.5695C9.83079 10.6156 9.80771 10.7541 9.80771 10.8464C9.80771 11.0772 9.96925 11.6079 10.2462 12.0233C10.4539 12.3464 10.8 12.7618 11.1693 13.0848C11.5846 13.4541 11.9539 13.7079 12.3693 13.9156C12.8539 14.1464 13.1539 14.2156 13.3154 14.1464C13.3385 14.1233 13.3846 14.1233 13.4077 14.1002C13.4539 14.0541 13.5462 13.9387 13.7077 13.7541C13.9385 13.4541 14.0539 13.3387 14.2385 13.2464C14.2846 13.2233 14.3539 13.2002 14.4 13.1772C14.7231 13.0618 15.0693 13.0848 15.3923 13.2695C15.6231 13.3848 16.0846 13.6618 16.3846 13.8695C16.7539 14.1233 17.6308 14.8156 17.7693 14.9772C17.9077 15.1387 18 15.3464 18 15.5772C18.0231 15.7156 17.9769 15.9002 17.9077 16.0848Z"
+                                        fill="#725E51" />
+                                </g>
+                            </svg>
+                        </a>
+                        <a class="header-social_link" href="">
+                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.2065 0.896603C21.4991 1.12599 21.6296 1.48633 21.545 1.83204L17.9357 16.5868C17.8568 16.9086 17.6033 17.1698 17.2653 17.2772C16.9275 17.3846 16.5533 17.3228 16.2767 17.1138L11.56 13.5516L9.58123 16.8394C9.37873 17.176 8.97643 17.3668 8.56198 17.3228C8.14764 17.279 7.80271 17.0089 7.68819 16.6386L5.79841 10.5334L1.2587 9.69523C0.812077 9.61265 0.476961 9.26964 0.434256 8.85092C0.391563 8.43242 0.651427 8.03754 1.07353 7.87948L20.1516 0.740116C20.5075 0.607028 20.9138 0.667328 21.2065 0.896603ZM5.03611 8.45109L6.81946 8.78027C7.19814 8.85013 7.50268 9.10944 7.60876 9.45223L8.98734 13.9059L10.3564 11.6311C10.5049 11.3846 10.7639 11.2115 11.0642 11.1585C11.3642 11.1055 11.6743 11.1781 11.9109 11.3567L16.2914 14.665L19.0987 3.18857L5.03611 8.45109Z"
+                                    fill="#725E51" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.0885 2.42853C21.5408 2.16573 21.7005 1.62775 21.4568 1.18889C21.2132 0.749913 20.6467 0.555514 20.1516 0.740801L1.07353 7.88028C0.651427 8.03811 0.391563 8.43299 0.434256 8.8516C0.476961 9.27021 0.812077 9.61345 1.2587 9.6958L6.41503 10.6478C6.674 10.6956 6.9431 10.6498 7.16664 10.5199L21.0885 2.42853Z"
+                                    fill="#725E51" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.5451 1.83251C21.6504 1.40186 21.4211 0.960857 20.9914 0.767357C20.5615 0.573744 20.0439 0.678369 19.741 1.02003L10.4598 11.4912C10.099 11.8981 10.164 12.4978 10.6049 12.8307L16.2767 17.1144C16.5533 17.3233 16.9275 17.3852 17.2654 17.2777C17.6033 17.1704 17.8569 16.9091 17.9357 16.5873L21.5451 1.83251Z"
+                                    fill="#725E51" />
+                            </svg>
+                        </a>
+                        <a class="header-social_link for-mob" href="">
+                            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.8932 12C4.05996 12 0.162399 7.49549 0 0H3.42286C3.53529 5.5015 6.05871 7.83183 8.05746 8.31231V0H11.2804V4.74474C13.2542 4.54054 15.3279 2.37838 16.0275 0H19.2505C18.9869 1.23349 18.4614 2.40142 17.7069 3.43072C16.9524 4.46001 15.9852 5.32854 14.8657 5.98198C16.1153 6.57905 17.2191 7.42414 18.1041 8.4615C18.9891 9.49885 19.6353 10.7049 20 12H16.4522C16.1248 10.8751 15.4594 9.86812 14.5394 9.10528C13.6194 8.34244 12.4858 7.85766 11.2804 7.71171V12H10.8932Z"
+                                    fill="#725E51" />
+                            </svg>
+
+                        </a>
+                        <a data-popup-open="popup-call-back" class="button">
+                            Онлайн-запись
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+    <div class="bread flex padding" id="bread">
+    <ul class="def_div" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+        <li id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+
+            <a href="/" title="Главная" itemprop="item">
+                Главная
+            </a>
+            <meta itemprop="position" content="1">
+        </li>
+        <li>
+            <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L4 3.5L1 6.5" stroke="#725E51" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </li>
+        <li>
+            <a href="/" title="Главная" itemprop="item">
+                Услуги
+            </a>
+            <meta itemprop="position" content="1">
+        </li>
+        <li>
+            <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L4 3.5L1 6.5" stroke="#725E51" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+        </li>
+        <li>
+            Инъекционная косметология
+        </li>
+    </ul>
+</div>
+    <main>
+
+        <h1 class="title">
+            Цены на услуги
+        </h1>
+
+        <section class='padding flex price-list_section sect_filt_v1 sect_filt_toggle quest margin_bot no-first-active'>
+    <div class='def_div price-list'>
+       
+        <div class="price-list_btns btns btns-filt_cont_v1">
+            <div class="btn btn_filt_v1" data-id="1"> Аппаратная косметология</div>
+            <div class="btn btn_filt_v1" data-id="2">Инъекционная косметология</div>
+            <div class="btn btn_filt_v1" data-id="3">Уходовые процедуры</div>
+            <div class="btn btn_filt_v1" data-id="4">Лазерная косметология</div>
+            <div class="btn btn_filt_v1" data-id="5">IV-терапия (витаминные капельницы)</div>
+            <div class="btn btn_filt_v1" data-id="6">Удаление новообразований</div>
+        </div>
+
+        <div class="price-list_sect cont_filt_v1" data-id="1">
+
+            <h2 class="def_title">
+                Аппаратная косметология
+            </h2>
+
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="price-list_sect cont_filt_v1" data-id="2">
+
+            <h2 class="def_title">
+                Инъекционная косметология
+            </h2>
+
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="price-list_sect cont_filt_v1" data-id="3">
+
+            <h2 class="def_title">
+                Уходовые процедуры
+            </h2>
+
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="price-list_sect cont_filt_v1" data-id="4">
+
+            <h2 class="def_title">
+                Лазерная косметология
+            </h2>
+
+
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="price-list_sect cont_filt_v1" data-id="5">
+
+            <h2 class="def_title">
+                IV-терапия (витаминные капельницы)
+            </h2>
+
+
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="price-list_sect cont_filt_v1" data-id="6">
+
+            <h2 class="def_title">
+                Удаление новообразований
+            </h2>
+
+
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+            <div class="card_v1 quest-sect price-list_quest">
+                <div class="quest-title">
+                    <h3>
+                        Микроигольчатый RF-лифтинг Inmode
+                    </h3>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0.941162V12.9412M12 24.9412V12.9412M12 12.9412H24H0" stroke="#725E51" />
+                    </svg>
+                </div>
+                <div class="quest-cont for-start-quest" style="height: 0px;">
+                    <div class="service-price_list">
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Лицо
+                            </h3>
+                            <p class="price">
+                                36 990 ₽
+                            </p>
+                        </div>
+                    </div>
+                    <a class="button v3" href="">
+                        Перейти к услуге
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <div class="padding flex main-form_section margin_bot" id="form-desk">
+    <div class="def_div main-form form-all">
+        <div class="left">
+            <h2> Записаться на прием</h2>
+            <p class="subtext">
+                Круглосуточная онлайн-запись на прием или услугу<br>
+                в любое удобное для Вас время.
+            </p>
+            <form>
+                <input type="hidden" name="url" value="https://test.ru/">
+                <input type="hidden" name="name-form" value="popup-call-back">
+                <div class="inputs_cont">
+                    <div class="input_cont"> <input type="text" name="name" placeholder="Ваше имя"></div>
+                    <div class="input_cont"> <input type="text" name="phone" placeholder="+7(999) 999-99-99"></div>
+                    <textarea name="message" placeholder="Ваше сообщение" maxlength="250"></textarea>
+
+                </div>
+
+                <button type="submit" class="button"> Отправить</button>
+
+                <div class="checkbox v2 " data-processing="">
+                    <div class="check-box-btn">
+                        <img class="check" src="./img/Checked.svg" alt="">
+                    </div>
+                    <p>
+                        Я подтверждаю ознакомление с <a href="">Политикой</a> и даю согласие на <a href="">обработку персональных
+                            данных</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <img class="back" src="./img/img-min.png" alt="">
+
+    </div>
+</div>
+    </main>
+    <footer class="padding flex flex-direct">
+    <div class="def_div footer-container">
+
+        <div class="footer-help_continaer ">
+            <div class="footer-left_cont ">
+                <a class="footer-logo" href="/">
+                    <img src="./img/logo-white.svg" alt="logo">
+                </a>
+                <div class="footer-adress_cont">
+                    <p class="adress">
+                        г. Сургут, пр. Ленина, 18
+                    </p>
+                    <p class="time">
+                        Ежедневно с 9:00 до 21:00
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-right_cont ">
+                <a href="tel:+73462983398" class="footer-phone">
+                    +7 (3462) 98-33-98
+                </a>
+                <div class="cont_1">
+                    <a class="header-social_link" href="">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_189_8133" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="24" height="24">
+                                <path d="M23.5383 0.46154H0.461426V23.5385H23.5383V0.46154Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_189_8133)">
+                                <path
+                                    d="M12 1.38495C6.13848 1.38495 1.38452 6.1387 1.38452 12.0002C1.38452 14.2156 2.05387 16.3156 3.3231 18.1156L1.43068 22.2695C1.38452 22.3618 1.4076 22.4541 1.47683 22.5233C1.54606 22.5925 1.63848 22.6156 1.73079 22.5925L6.27694 20.931C7.98464 22.0387 9.96925 22.6156 12 22.6156H12.0231C17.8846 22.6156 22.6385 17.8618 22.6385 12.0002C22.6385 6.1387 17.8616 1.38495 12 1.38495ZM17.9077 16.0848C17.8385 16.2695 17.6769 16.4772 17.5846 16.6387C17.3769 16.9156 17.1231 17.1925 16.8923 17.3772C16.8462 17.4233 16.8 17.4464 16.7539 17.4925C16.7077 17.5156 16.6846 17.5387 16.6385 17.5618C16.4539 17.7002 16.2693 17.7925 16.1077 17.8387C15.9923 17.8848 15.8539 17.9079 15.7154 17.9079C15.6693 17.9079 15.6231 17.9079 15.6 17.9079C15.3693 17.9079 15.2308 17.8618 14.9077 17.7464C14.6539 17.631 14.3769 17.5156 14.0769 17.4002L14.0077 17.3541C13.7539 17.2387 13.5 17.1002 13.2462 16.9848L13.1539 16.9156C12.9 16.7772 12.6693 16.6387 12.4385 16.5002L12.3923 16.4541C10.8 15.4618 9.46156 14.2618 8.30771 12.7618C8.19233 12.6233 8.10002 12.4848 7.98464 12.3464C7.93848 12.2772 7.89233 12.2079 7.84617 12.1387L7.70771 11.931C7.61541 11.7925 7.54617 11.6772 7.45387 11.5387L7.43079 11.5156C7.36156 11.3772 7.26925 11.2618 7.20002 11.1233C7.20002 11.1233 7.17694 11.1002 7.17694 11.0772C6.80771 10.431 6.48464 9.76177 6.25387 9.11562C6.00002 8.42331 5.93079 7.98485 6.20771 7.50023C6.3231 7.29254 6.76156 6.87716 7.06156 6.66946C7.59233 6.27716 7.8231 6.1387 8.05387 6.09254C8.2154 6.06946 8.46925 6.06946 8.65387 6.1387C8.74617 6.16177 8.86156 6.231 8.93079 6.27716C9.36925 6.55408 10.3846 7.86946 10.7077 8.49254C10.9385 8.90793 10.9846 9.231 10.9154 9.48485C10.8462 9.76177 10.6846 9.92331 10.2231 10.2695C10.1308 10.3618 10.0154 10.431 9.94618 10.5002C9.9231 10.5233 9.9231 10.5233 9.90002 10.5464L9.87695 10.5695C9.83079 10.6156 9.80771 10.7541 9.80771 10.8464C9.80771 11.0772 9.96925 11.6079 10.2462 12.0233C10.4539 12.3464 10.8 12.7618 11.1693 13.0848C11.5846 13.4541 11.9539 13.7079 12.3693 13.9156C12.8539 14.1464 13.1539 14.2156 13.3154 14.1464C13.3385 14.1233 13.3846 14.1233 13.4077 14.1002C13.4539 14.0541 13.5462 13.9387 13.7077 13.7541C13.9385 13.4541 14.0539 13.3387 14.2385 13.2464C14.2846 13.2233 14.3539 13.2002 14.4 13.1772C14.7231 13.0618 15.0693 13.0848 15.3923 13.2695C15.6231 13.3848 16.0846 13.6618 16.3846 13.8695C16.7539 14.1233 17.6308 14.8156 17.7693 14.9772C17.9077 15.1387 18 15.3464 18 15.5772C18.0231 15.7156 17.9769 15.9002 17.9077 16.0848Z"
+                                    fill="#D9D0C1" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a class="header-social_link" href="">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.2065 0.896603C21.4991 1.12599 21.6296 1.48633 21.545 1.83204L17.9357 16.5868C17.8568 16.9086 17.6033 17.1698 17.2653 17.2772C16.9275 17.3846 16.5533 17.3228 16.2767 17.1138L11.56 13.5516L9.58123 16.8394C9.37873 17.176 8.97643 17.3668 8.56198 17.3228C8.14764 17.279 7.80271 17.0089 7.68819 16.6386L5.79841 10.5334L1.2587 9.69523C0.812077 9.61265 0.476961 9.26964 0.434256 8.85092C0.391563 8.43242 0.651427 8.03754 1.07353 7.87948L20.1516 0.740116C20.5075 0.607028 20.9138 0.667328 21.2065 0.896603ZM5.03611 8.45109L6.81946 8.78027C7.19814 8.85013 7.50268 9.10944 7.60876 9.45223L8.98734 13.9059L10.3564 11.6311C10.5049 11.3846 10.7639 11.2115 11.0642 11.1585C11.3642 11.1055 11.6743 11.1781 11.9109 11.3567L16.2914 14.665L19.0987 3.18857L5.03611 8.45109Z"
+                                fill="#D9D0C1" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.0885 2.42853C21.5408 2.16573 21.7005 1.62775 21.4568 1.18889C21.2132 0.749913 20.6467 0.555514 20.1516 0.740801L1.07353 7.88028C0.651427 8.03811 0.391563 8.43299 0.434256 8.8516C0.476961 9.27021 0.812077 9.61345 1.2587 9.6958L6.41503 10.6478C6.674 10.6956 6.9431 10.6498 7.16664 10.5199L21.0885 2.42853Z"
+                                fill="#D9D0C1" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.5451 1.83251C21.6504 1.40186 21.4211 0.960857 20.9914 0.767357C20.5615 0.573744 20.0439 0.678369 19.741 1.02003L10.4598 11.4912C10.099 11.8981 10.164 12.4978 10.6049 12.8307L16.2767 17.1144C16.5533 17.3233 16.9275 17.3852 17.2654 17.2777C17.6033 17.1704 17.8569 16.9091 17.9357 16.5873L21.5451 1.83251Z"
+                                fill="#D9D0C1" />
+                        </svg>
+                    </a>
+                    <a class="header-social_link for-mob" href="">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.8932 12C4.05996 12 0.162399 7.49549 0 0H3.42286C3.53529 5.5015 6.05871 7.83183 8.05746 8.31231V0H11.2804V4.74474C13.2542 4.54054 15.3279 2.37838 16.0275 0H19.2505C18.9869 1.23349 18.4614 2.40142 17.7069 3.43072C16.9524 4.46001 15.9852 5.32854 14.8657 5.98198C16.1153 6.57905 17.2191 7.42414 18.1041 8.4615C18.9891 9.49885 19.6353 10.7049 20 12H16.4522C16.1248 10.8751 15.4594 9.86812 14.5394 9.10528C13.6194 8.34244 12.4858 7.85766 11.2804 7.71171V12H10.8932Z"
+                                fill="#D9D0C1" />
+                        </svg>
+
+                    </a>
+
+                </div>
+                <a data-popup-open="popup-call-back" class="button">
+                    Онлайн-запись
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-top_container">
+            <div class="footer-left_cont">
+                <a class="footer-logo" href="/">
+                    <img src="./img/logo-white.svg" alt="logo">
+                </a>
+                <div class="footer-adress_cont">
+                    <p class="adress">
+                        г. Сургут, пр. Ленина, 18
+                    </p>
+                    <p class="time">
+                        Ежедневно с 9:00 до 21:00
+                    </p>
+                </div>
+            </div>
+            <div class="footer-menu footer-check-height-cont ">
+                <div class="footer-menu_cont open">
+                    <div class="cont">
+                        <a class="footer-menu_title active" href="">
+                            Услуги
+                        </a>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0.90625V8.90625M8 16.9063V8.90625M8 8.90625H16H0" stroke="white"
+                                stroke-opacity="0.5" />
+                        </svg>
+                    </div>
+                    <ul data-id="0" class="footer-check-height ">
+                        <li class="active">
+                            <a href="">
+                                Инъекционная косметология
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Уходовые процедуры
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Аппаратная косметология
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Лазерная косметология
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                IV-терапия
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Удаление новообразований
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Уходовые процедуры
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Аппаратная косметология
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Лазерная косметология
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                IV-терапия
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Удаление новообразований
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div data-id="0" class="more-height invise">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                                    fill="#0B111F"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="footer-menu_cont ">
+                    <div class="cont">
+                        <a class="footer-menu_title">
+                            Пациентам
+                        </a>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0.90625V8.90625M8 16.9063V8.90625M8 8.90625H16H0" stroke="white"
+                                stroke-opacity="0.5" />
+                        </svg>
+                    </div>
+                    <ul data-id="1" class="footer-check-height ">
+                        <li class="active">
+                            <a href="">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Решить проблему
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Цены
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                До после
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Акции
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Подарочные сертификаты
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div data-id="1" class="more-height invise">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                                    fill="#0B111F"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="footer-menu_cont ">
+                    <div class="cont">
+                        <a class="footer-menu_title">
+                            Клиника
+                        </a>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0.90625V8.90625M8 16.9063V8.90625M8 8.90625H16H0" stroke="white"
+                                stroke-opacity="0.5" />
+                        </svg>
+                    </div>
+                    <ul data-id="2" class="footer-check-height ">
+                        <li class="active">
+                            <a href="">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Лицензия
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Политика кофидицеальности
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <div data-id="2" class="more-height invise">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                                    fill="#0B111F"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right_cont">
+                <a href="tel:+73462983398" class="footer-phone">
+                    +7 (3462) 98-33-98
+                </a>
+                <div class="cont_1">
+                    <a class="header-social_link" href="">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_189_8133" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="24" height="24">
+                                <path d="M23.5383 0.46154H0.461426V23.5385H23.5383V0.46154Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_189_8133)">
+                                <path
+                                    d="M12 1.38495C6.13848 1.38495 1.38452 6.1387 1.38452 12.0002C1.38452 14.2156 2.05387 16.3156 3.3231 18.1156L1.43068 22.2695C1.38452 22.3618 1.4076 22.4541 1.47683 22.5233C1.54606 22.5925 1.63848 22.6156 1.73079 22.5925L6.27694 20.931C7.98464 22.0387 9.96925 22.6156 12 22.6156H12.0231C17.8846 22.6156 22.6385 17.8618 22.6385 12.0002C22.6385 6.1387 17.8616 1.38495 12 1.38495ZM17.9077 16.0848C17.8385 16.2695 17.6769 16.4772 17.5846 16.6387C17.3769 16.9156 17.1231 17.1925 16.8923 17.3772C16.8462 17.4233 16.8 17.4464 16.7539 17.4925C16.7077 17.5156 16.6846 17.5387 16.6385 17.5618C16.4539 17.7002 16.2693 17.7925 16.1077 17.8387C15.9923 17.8848 15.8539 17.9079 15.7154 17.9079C15.6693 17.9079 15.6231 17.9079 15.6 17.9079C15.3693 17.9079 15.2308 17.8618 14.9077 17.7464C14.6539 17.631 14.3769 17.5156 14.0769 17.4002L14.0077 17.3541C13.7539 17.2387 13.5 17.1002 13.2462 16.9848L13.1539 16.9156C12.9 16.7772 12.6693 16.6387 12.4385 16.5002L12.3923 16.4541C10.8 15.4618 9.46156 14.2618 8.30771 12.7618C8.19233 12.6233 8.10002 12.4848 7.98464 12.3464C7.93848 12.2772 7.89233 12.2079 7.84617 12.1387L7.70771 11.931C7.61541 11.7925 7.54617 11.6772 7.45387 11.5387L7.43079 11.5156C7.36156 11.3772 7.26925 11.2618 7.20002 11.1233C7.20002 11.1233 7.17694 11.1002 7.17694 11.0772C6.80771 10.431 6.48464 9.76177 6.25387 9.11562C6.00002 8.42331 5.93079 7.98485 6.20771 7.50023C6.3231 7.29254 6.76156 6.87716 7.06156 6.66946C7.59233 6.27716 7.8231 6.1387 8.05387 6.09254C8.2154 6.06946 8.46925 6.06946 8.65387 6.1387C8.74617 6.16177 8.86156 6.231 8.93079 6.27716C9.36925 6.55408 10.3846 7.86946 10.7077 8.49254C10.9385 8.90793 10.9846 9.231 10.9154 9.48485C10.8462 9.76177 10.6846 9.92331 10.2231 10.2695C10.1308 10.3618 10.0154 10.431 9.94618 10.5002C9.9231 10.5233 9.9231 10.5233 9.90002 10.5464L9.87695 10.5695C9.83079 10.6156 9.80771 10.7541 9.80771 10.8464C9.80771 11.0772 9.96925 11.6079 10.2462 12.0233C10.4539 12.3464 10.8 12.7618 11.1693 13.0848C11.5846 13.4541 11.9539 13.7079 12.3693 13.9156C12.8539 14.1464 13.1539 14.2156 13.3154 14.1464C13.3385 14.1233 13.3846 14.1233 13.4077 14.1002C13.4539 14.0541 13.5462 13.9387 13.7077 13.7541C13.9385 13.4541 14.0539 13.3387 14.2385 13.2464C14.2846 13.2233 14.3539 13.2002 14.4 13.1772C14.7231 13.0618 15.0693 13.0848 15.3923 13.2695C15.6231 13.3848 16.0846 13.6618 16.3846 13.8695C16.7539 14.1233 17.6308 14.8156 17.7693 14.9772C17.9077 15.1387 18 15.3464 18 15.5772C18.0231 15.7156 17.9769 15.9002 17.9077 16.0848Z"
+                                    fill="#D9D0C1" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a class="header-social_link" href="">
+                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.2065 0.896603C21.4991 1.12599 21.6296 1.48633 21.545 1.83204L17.9357 16.5868C17.8568 16.9086 17.6033 17.1698 17.2653 17.2772C16.9275 17.3846 16.5533 17.3228 16.2767 17.1138L11.56 13.5516L9.58123 16.8394C9.37873 17.176 8.97643 17.3668 8.56198 17.3228C8.14764 17.279 7.80271 17.0089 7.68819 16.6386L5.79841 10.5334L1.2587 9.69523C0.812077 9.61265 0.476961 9.26964 0.434256 8.85092C0.391563 8.43242 0.651427 8.03754 1.07353 7.87948L20.1516 0.740116C20.5075 0.607028 20.9138 0.667328 21.2065 0.896603ZM5.03611 8.45109L6.81946 8.78027C7.19814 8.85013 7.50268 9.10944 7.60876 9.45223L8.98734 13.9059L10.3564 11.6311C10.5049 11.3846 10.7639 11.2115 11.0642 11.1585C11.3642 11.1055 11.6743 11.1781 11.9109 11.3567L16.2914 14.665L19.0987 3.18857L5.03611 8.45109Z"
+                                fill="#D9D0C1" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.0885 2.42853C21.5408 2.16573 21.7005 1.62775 21.4568 1.18889C21.2132 0.749913 20.6467 0.555514 20.1516 0.740801L1.07353 7.88028C0.651427 8.03811 0.391563 8.43299 0.434256 8.8516C0.476961 9.27021 0.812077 9.61345 1.2587 9.6958L6.41503 10.6478C6.674 10.6956 6.9431 10.6498 7.16664 10.5199L21.0885 2.42853Z"
+                                fill="#D9D0C1" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.5451 1.83251C21.6504 1.40186 21.4211 0.960857 20.9914 0.767357C20.5615 0.573744 20.0439 0.678369 19.741 1.02003L10.4598 11.4912C10.099 11.8981 10.164 12.4978 10.6049 12.8307L16.2767 17.1144C16.5533 17.3233 16.9275 17.3852 17.2654 17.2777C17.6033 17.1704 17.8569 16.9091 17.9357 16.5873L21.5451 1.83251Z"
+                                fill="#D9D0C1" />
+                        </svg>
+                    </a>
+                    <a class="header-social_link for-mob" href="">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.8932 12C4.05996 12 0.162399 7.49549 0 0H3.42286C3.53529 5.5015 6.05871 7.83183 8.05746 8.31231V0H11.2804V4.74474C13.2542 4.54054 15.3279 2.37838 16.0275 0H19.2505C18.9869 1.23349 18.4614 2.40142 17.7069 3.43072C16.9524 4.46001 15.9852 5.32854 14.8657 5.98198C16.1153 6.57905 17.2191 7.42414 18.1041 8.4615C18.9891 9.49885 19.6353 10.7049 20 12H16.4522C16.1248 10.8751 15.4594 9.86812 14.5394 9.10528C13.6194 8.34244 12.4858 7.85766 11.2804 7.71171V12H10.8932Z"
+                                fill="#D9D0C1" />
+                        </svg>
+
+                    </a>
+
+                </div>
+                <a data-popup-open="popup-call-back" class="button">
+                    Онлайн-запись
+                </a>
+            </div>
+        </div>
+        <div class="footer-map_container" id="map">
+
+        </div>
+
+        <div class="footer-bottom_container">
+            <p class="text">
+                ©2025 Клиника косметологии Кожа. Все права защищены.
+            </p>
+        </div>
+    </div>
+</footer>
+    <script src="./js/addSwiper.js"></script>
+    <script src="./js/copyElements.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/map.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+.main-form.problem-detail .left .subtext {
+    margin-bottom: 20px;
+    font-family: Manrope;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0%;
+}
+
+.main-form.v2.stocks-list .left {
+    max-width: 580px;
+    height: auto;
+}
+
+.main-form.v2.stocks-list .back {
+    aspect-ratio: 470/382;
+    max-width: 470px;
+}
+
+.main-form.v2.stocks-list .left h2 {
+    margin-bottom: 20px;
+}
+
+.main-form.v2.stocks-list {
+    min-height: 462px;
+}
+
+.main-form.v2.stocks-list .left .btns_cont .button {
+    max-width: 153px !important;
+}
+
+.stocks-list_section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+@media (max-width: 720px) {
+    .main-form.v2.stocks-list .back {
+        max-width: none;
+        border-radius: 0;
+        aspect-ratio: 343/230;
+    }
+
+    .main-form.v2.stocks-list {
+        flex-direction: column-reverse;
+        padding: 0;
+        gap: 0;
+
+        .left {
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    .main-form.v2.problem-detail {
+        .left {
+
+            .subtext {
+                font-family: Manrope;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+            }
+
+            h2 {
+                font-family: Manrope;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 130%;
+                letter-spacing: 0px;
+                margin-bottom: 10px;
+            }
+
+            .default {
+                color: #725E51;
+                margin: 0;
+
+                * {
+                    color: #725E51;
+                }
+            }
+        }
+    }
+
+}

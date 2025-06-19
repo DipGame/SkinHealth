@@ -1,0 +1,14 @@
+.about-baner {
+    img {
+        aspect-ratio: 1280/557;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-baner {
+        img {
+            aspect-ratio: 343/234;
+        }
+    }
+}

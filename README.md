@@ -1,1 +1,9 @@
 https://dipgame.github.io/SkinHealth/
+https://dipgame.github.io/SkinHealth/404.html
+https://dipgame.github.io/SkinHealth/about.html
+https://dipgame.github.io/SkinHealth/price.html
+https://dipgame.github.io/SkinHealth/problem-detail.html
+https://dipgame.github.io/SkinHealth/rezult.html
+https://dipgame.github.io/SkinHealth/service-detail.html
+https://dipgame.github.io/SkinHealth/service-section.html
+https://dipgame.github.io/SkinHealth/stocks.html

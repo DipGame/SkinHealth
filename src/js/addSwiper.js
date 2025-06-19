@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         }
     });
-    let swiperDocsWorks = new Swiper(".swiperDocsWorks", {
+    let swiperDocsWorks = new Swiper(".swiperDocsWorks:not(.sw_cont-rezult .swiperDocsWorks)", {
         speed: 1000,
         loop: true,
         spaceBetween: 20,
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         }
     });
-    let swiperGallery = new Swiper(".swiperGallery", {
+    let swiperGallery = new Swiper(".swiperGallery:not(.swiperGalleryAbout)", {
         speed: 1000,
         loop: false,
         spaceBetween: 20,
@@ -73,6 +73,56 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
             501: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                loop: true,
+            },
+            961: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+                loop: true,
+            },
+        }
+    });
+    let swiperGalleryAbout = new Swiper(".swiperGalleryAbout", {
+        loop: true,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 30,
+        speed: 1000, // Длительность анимации
+        on: {
+            setTransition: function (duration) {
+                this.slides.forEach((slide) => {
+                    slide.style.transitionDuration = `${duration}ms`; // Применить длительность анимации
+                });
+            },
+        },
+      
+        navigation: {
+            nextEl: ".about-gallery .sw-btn-next",
+            prevEl: ".about-gallery .sw-btn-prev",
+        },
+        breakpoints: {
+            961: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                initialSlide: 2,
+                centeredSlides: false,
+            },
+        },
+    });
+
+    let swiperVideos = new Swiper(".swiperVideos", {
+        speed: 1000,
+        loop: false,
+        spaceBetween: 20,
+        slidesPerView: "auto",
+        navigation: {
+            nextEl: ".service-video .sw-btn-next",
+            prevEl: ".service-video .sw-btn-prev",
+        },
+        breakpoints: {
+            721: {
                 slidesPerView: 2,
                 spaceBetween: 30,
                 loop: true,

@@ -11,6 +11,29 @@
     background-position: center;
     background-size: cover;
 
+    &.v2 {
+        background-image: url('./../img/паттерн 4.svg');
+        overflow: hidden;
+        background-color: #0D1011;
+        min-height: 370px;
+
+        .subtext {
+            max-width: 606px;
+            color: #FFF;
+        }
+
+        h2 {
+            color: #FFF;
+        }
+
+        .back-img {
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 454px;
+            aspect-ratio: 1/1;
+        }
+    }
+
     h2 {
         font-family: Manrope;
         font-weight: 500;
@@ -71,6 +94,14 @@
 @media (max-width: 720px) {
     .main-zapis {
         padding: 40px 24px 350px;
+
+        &.v2 {
+            padding: 40px 24px;
+
+            .back-img {
+                display: none;
+            }
+        }
     }
 }
 
@@ -108,6 +139,20 @@
             margin: 0 auto;
             width: 100%;
             height: fit-content;
+        }
+
+        &.v2 {
+            padding: 40px 24px;
+            min-height: auto;
+            gap: 40px;
+
+            .back-img {
+                display: none;
+            }
+
+            .button {
+                margin-top: 20px;
+            }
         }
     }
 }

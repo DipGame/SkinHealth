@@ -1,0 +1,102 @@
+.service-price {
+
+    .button {
+        max-width: 261px;
+    }
+}
+
+.service-price_list {
+    .card {
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        background-color: #D9D0C1;
+
+        h3 {
+            font-family: Manrope;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: 0%;
+        }
+
+        .price {
+            font-family: Manrope;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        &:nth-child(2n) {
+            background: none;
+        }
+    }
+
+    &.v2 {
+
+        .card {
+            h3 {
+                width: 30%;
+            }
+
+            .description {
+                width: 35%;
+                margin-right: auto;
+            }
+
+            .price {
+                width: 15%;
+                text-align: end;
+            }
+
+            @media (max-width: 960px) {
+                h3 {
+                    width: 25%;
+                }
+
+                .description {
+                    width: 50%;
+                    margin-right: auto;
+                }
+
+                .price {
+                    width: 15%;
+                    text-align: end;
+                }
+            }
+
+            @media (max-width: 720px) {
+                flex-direction: column;
+                align-items: start;
+
+                h3 {
+                    width: auto;
+                }
+
+                .description {
+                    width: auto;
+                    margin: 0;
+                }
+
+                .price {
+                    width: auto;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .service-price_list {
+        .card {
+            padding: 20px;
+        }
+    }
+}

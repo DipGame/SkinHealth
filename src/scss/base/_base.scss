@@ -83,6 +83,12 @@ h2 {
 			margin-bottom: 20px;
 		}
 	}
+
+	&.v3 {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .button_v2,
@@ -111,7 +117,7 @@ h2 {
 }
 
 h1.title {
-	margin: 0 auto 80px;
+	margin: 0 auto 60px;
 	width: 100%;
 	max-width: 1312px;
 	padding: 0 16px;
@@ -402,10 +408,10 @@ button:disabled {
 			align-items: center;
 
 			svg {
-				max-width: 6px;
-				max-height: 3px;
-				min-height: 3px;
-				min-width: 6px;
+				// max-width: 3px;
+				// max-height: 6px;
+				// min-height: 6px;
+				// min-width: 3px;
 			}
 
 			a {
@@ -812,6 +818,9 @@ button:disabled {
 	z-index: 10000;
 	box-sizing: border-box;
 	border-top: 1px solid #EAE7E1;
+	-webkit-box-shadow: 0px -4px 8px 0px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px -4px 8px 0px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px -4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .sogl * {
@@ -1005,7 +1014,7 @@ button:disabled {
 		min-width: 20px;
 		border-radius: 2px;
 		cursor: pointer;
-	
+
 		.check {
 			width: 100%;
 			height: 100%;

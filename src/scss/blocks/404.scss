@@ -1,0 +1,59 @@
+/* Стили для контейнера страницы 404 */
+.error-page-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.error-page-title {
+    font-size: 100px;
+    font-weight: bold;
+    color: #725E51;
+    /* Оранжевый */
+    margin: 0;
+    opacity: 0;
+    /* Начальная прозрачность */
+    animation: fadeIn 1.5s ease-out forwards;
+    /* Анимация появления */
+}
+
+.error-page-text {
+    font-size: 24px;
+    margin: 10px 0 30px;
+    color: #1A1A1A;
+    /* Темно-серый */
+    opacity: 0;
+    /* Начальная прозрачность */
+    animation: fadeIn 2s ease-out forwards;
+    /* Анимация появления */
+}
+
+.error-page-button {
+   margin: 0 auto;
+    max-width: 400px;
+}
+
+// .error-page-button:hover {
+//     background-color: #1A1A1A;
+//     /* Темно-серый при наведении */
+//     color: #FFFFFF;
+//     transform: scale(1.1);
+//     /* Увеличиваем кнопку на 10% */
+// }
+
+/* Анимация появления элементов */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Элементы "падают" сверху */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,59 @@
+.about-licenze_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-licenze_card {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: .5s;
+
+    &:hover {
+        transform: scale(0.95);
+    }
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 400/540;
+        border-radius: 16px;
+    }
+
+    h3 {
+        font-family: Manrope;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: 0%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .about-licenze_grid {
+       
+        gap: 20px;
+    }
+
+    .about-licenze_card {
+        max-width: 161px;
+
+        img {
+            aspect-ratio: 161/218;
+            border-radius: 8px;
+        }
+
+        h3 {
+            font-family: Manrope;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: 0%;
+        }
+    }
+}

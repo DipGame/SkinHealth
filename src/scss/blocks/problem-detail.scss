@@ -1,0 +1,21 @@
+.problem-detail {
+
+    .btns_cont {
+
+        .button {
+            max-width: 263px !important;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .problem-detail {
+
+        .btns_cont {
+    
+            .button {
+                max-width: none !important;
+            }
+        }
+    }
+}

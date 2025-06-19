@@ -1,0 +1,24 @@
+.rezult {
+    .t1004__scroll-icon-wrapper {
+        right: 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    .rezult {
+
+        .price-list_sect {
+            padding: 0;
+        }
+
+        .def_title {
+            padding: 0 16px;
+        }
+
+        .swiperDocsWorks {
+            padding: 0 16px;
+        }
+
+    }
+}
+

@@ -1,0 +1,128 @@
+.price-list {
+    position: relative;
+}
+
+.price-list_btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+
+    .btn {
+        font-family: Manrope;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        border-radius: 8px;
+        padding: 14px 16px;
+        border: 1px solid #725E51;
+        color: #725E51;
+        cursor: pointer;
+        transition: .5s;
+
+        @media (min-width: 1281px) {
+            &:hover {
+                background-color: #725E51;
+                color: #E4E2DE;
+            }
+        }
+
+
+        &.active {
+            background-color: #725E51;
+            color: #E4E2DE;
+        }
+    }
+}
+
+.price-list_sect {
+    margin-bottom: 100px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.price-list_quest {
+    .quest-title {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        padding: 25px 0;
+        border-top: 1px solid #725E51;
+        border-bottom: 1px solid 2d2d2d00;
+        transition: .5s;
+
+        svg {
+            transition: .5s;
+        }
+    }
+
+    &.active {
+        padding-bottom: 50px;
+
+        .quest-title {
+            border-bottom: 1px solid #725E51;
+
+            svg {
+                transform: rotate(315deg);
+            }
+        }
+
+        .quest-cont {
+            margin: 30px 0 0;
+        }
+    }
+
+    &:last-of-type {
+        border-bottom: 1px solid #725E51;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .price-list_section {
+        padding: 0;
+    }
+
+    .price-list_btns {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 0 16px;
+
+        .btn {
+            white-space: nowrap;
+        }
+    }
+
+    .price-list_sect {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .price-list_sect {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .price-list_btns {
+        margin-bottom: 30px;
+    }
+
+    .price-list_quest {
+        .quest-title {
+            padding: 17px 0;
+        }
+
+        &.active {
+            padding-bottom: 30px;
+        }
+
+    }
+}

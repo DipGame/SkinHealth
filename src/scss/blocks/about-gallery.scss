@@ -1,0 +1,80 @@
+.swiperGalleryAbout {
+    overflow: visible;
+    width: 100%;
+    max-width: 1312px;
+    margin: 0 auto;
+    padding: 0 16px;
+   
+    
+    .main-about_card {
+
+        aspect-ratio: 620/420;
+        max-height: 420px;
+
+        img {
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            aspect-ratio: auto;
+            max-height: 420px;
+            border-radius: 16px;
+        }
+
+    }
+}
+
+.about-gallery {
+    width: 100%;
+
+    .def_title {
+        padding: 0 16px;
+    }
+
+    .sw_cont {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .sw-btn {
+        background-image: url('./../img/arrow_2.svg');
+        left: 14%;
+       
+    }
+
+    .sw-btn-next {
+        left: auto;
+        right: 14%;
+    }
+
+    .t1004__scroll-icon-wrapper {
+        right: 16px;
+    }
+}
+
+@media (max-width: 1615px) {
+    .about-gallery {
+    
+        .sw-btn {
+            left: 8%;
+        }
+    
+        .sw-btn-next {
+            left: auto;
+            right: 8%;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .about-gallery {
+        .sw_cont {
+            overflow: visible;
+        }
+    }
+
+    .swiperGalleryAbout {
+        overflow: hidden;
+    }
+}

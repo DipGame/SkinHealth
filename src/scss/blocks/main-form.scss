@@ -8,8 +8,61 @@
     gap: 20px;
     background-image: url("./../img/Mask group.svg");
     background-position: 100%;
-    background-size: 50% auto;
+    background-size: 50% 100%;
     overflow: hidden;
+
+    &.v2 {
+        min-height: 480px;
+
+        .left {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: -webkit-fill-available;
+
+            h2 {
+                margin-bottom: 40px;
+            }
+
+            .default {
+                margin: 0 0 auto;
+                padding: 0;
+            }
+
+            .btns_cont {
+                display: flex;
+                gap: 20px;
+                margin-top: 20px;
+
+                a {
+                    max-width: 226px;
+                    font-family: Manrope;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .back {
+            position: static;
+            max-width: 580px;
+            width: 100%;
+            height: fit-content;
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 580/400;
+            border-radius: 16px;
+            margin: 0;
+
+            @media (max-width: 1280px) {
+                max-width: 360px;
+            }
+        }
+    }
 
     .back {
         aspect-ratio: 1/1;
@@ -124,7 +177,17 @@
     .main-form {
         background-image: none;
 
-        .back {
+        &.v2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .back {
+                max-width: none;
+            }
+        }
+
+        .back:not(.v2 .back) {
             display: none;
         }
     }
@@ -147,6 +210,25 @@
 @media (max-width: 500px) {
     .main-form {
         padding: 40px 20px;
+
+        &.v2 {
+             .left h2 {
+                margin-bottom: 20px;
+
+
+             }
+
+             .left {
+
+                .btns_cont {
+                    flex-direction: column;
+
+                    a { 
+                        max-width: none;
+                    }
+                }
+             }
+        }
 
         .left {
             h2 {

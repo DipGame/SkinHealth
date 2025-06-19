@@ -1,0 +1,47 @@
+.about-text .default {
+    margin: 0;
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+
+    &.v2 {
+
+        .default {
+            margin-bottom: 40px;
+        }
+
+        .main-tecnologi_grid {
+            gap: 40px;
+
+            @media (max-width: 720px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 500px) {
+                grid-template-columns: repeat(1, 1fr);
+                
+            }
+        }
+
+        @media (max-width: 500px) {
+            .main-specialists_card {
+                max-width: none;
+            }
+
+            .main-specialists_card .img {
+                aspect-ratio: 343/463;
+            }
+        }
+    }
+}
+
+.about-text .def_title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

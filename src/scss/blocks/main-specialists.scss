@@ -52,4 +52,23 @@
         width: 100%;
         max-width: 300px;
     }
+    
+}
+
+@media (max-width: 500px) {
+    .main-specialists_section {
+        padding: 0;
+
+        .def_title {
+            padding: 0 16px;
+        }
+
+        .t1004__scroll-icon-wrapper {
+            right: 16px;
+        }
+    }
+
+    .swiperSpecialists {
+        padding: 0 16px;
+    }
 }

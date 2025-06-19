@@ -1,0 +1,90 @@
+.service-section_card {
+    background-color: #D9D0C1;
+    border-radius: 16px;
+    padding: 30px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        transition: .5s;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        transform: translateY(10px);
+
+        h3 {
+            color: #725E51;
+        }
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px 20px;
+
+        h3 {
+            font-family: Manrope;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            transition: .5s;
+        }
+
+        .default {
+            color: #725E51;
+            margin: 0;
+            padding: 0;
+
+            * {
+                color: #725E51;
+            }
+        }
+    }
+
+    .img {
+        aspect-ratio: 323/200;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+    .service-section_card {
+        padding: 30px 10px 10px;
+
+        .cont {
+
+            h3 {
+                font-family: Manrope;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: 0%;
+            }
+
+            .default {
+                font-family: Manrope;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+                letter-spacing: 0%;
+                color: #725E51;
+                margin: 0;
+                padding: 0;
+
+                * {
+                    font-family: Manrope;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                    letter-spacing: 0%;
+                    color: #725E51;
+                }
+            }
+        }
+    }
+}

@@ -108,71 +108,118 @@ document.addEventListener("DOMContentLoaded", function () {
         const all_btn_filt_v1 = sect_filt_v1.querySelectorAll('.btn_filt_v1');
         const all_cont_filt_v1 = sect_filt_v1.querySelectorAll('.cont_filt_v1');
 
+        let check_12;
+
+        if (sect_filt_v1.classList.contains('no-first-active')) {
+            check_12 = true;
+        }
+
         let num_1 = 0;
         let dataIdCheck;
         all_btn_filt_v1.forEach(btn => {
             let btnDataId = btn.getAttribute("data-id");
-            if (num_1 == 0) {
-                addClass(btn, 'active');
-                dataIdCheck = btnDataId;
-            } else {
-                removeClass(btn, 'active');
+
+            if (!check_12) {
+                if (num_1 == 0) {
+                    addClass(btn, 'active');
+                    dataIdCheck = btnDataId;
+                } else {
+                    removeClass(btn, 'active');
+                }
+
+                all_cont_filt_v1.forEach(cont => {
+                    if (num_1 == 0) {
+                        addClass(cont, 'invise');
+                    } else {
+                        removeClass(cont, 'invise');
+                    }
+
+                });
             }
 
+
+            btn.addEventListener('click', () => {
+
+
+                if (sect_filt_v1.classList.contains('sect_filt_toggle')) {
+                    if (btn.classList.contains("active")) {
+                        all_cont_filt_v1.forEach(cont => {
+                            removeClass(cont, 'invise');
+                        });
+                        removeClass(btn, 'active');
+                    } else {
+                        if (btnDataId == "all") {
+                            all_btn_filt_v1.forEach(el => {
+                                removeClass(el, 'active');
+                            })
+
+                            all_cont_filt_v1.forEach(cont => {
+                                removeClass(cont, 'invise');
+                            });
+
+                        } else {
+                            all_btn_filt_v1.forEach(el => {
+                                removeClass(el, 'active');
+                            })
+
+                            all_cont_filt_v1.forEach(cont => {
+                                let contDataId = cont.getAttribute("data-id");
+                                if (btnDataId != contDataId) {
+                                    addClass(cont, 'invise');
+                                } else {
+                                    removeClass(cont, 'invise');
+                                }
+                            });
+                        }
+
+                        addClass(btn, 'active');
+                    }
+                } else {
+                    if (btnDataId == "all") {
+                        all_btn_filt_v1.forEach(el => {
+                            removeClass(el, 'active');
+                        })
+
+                        all_cont_filt_v1.forEach(cont => {
+                            removeClass(cont, 'invise');
+                        });
+
+                    } else {
+                        all_btn_filt_v1.forEach(el => {
+                            removeClass(el, 'active');
+                        })
+
+                        all_cont_filt_v1.forEach(cont => {
+                            let contDataId = cont.getAttribute("data-id");
+                            if (btnDataId != contDataId) {
+                                addClass(cont, 'invise');
+                            } else {
+                                removeClass(cont, 'invise');
+                            }
+                        });
+                    }
+                    addClass(btn, 'active');
+                }
+            })
+
+            num_1++;
+        });
+
+        if (!check_12) {
             all_cont_filt_v1.forEach(cont => {
-                if (num_1 == 0) {
+                let contDataId = cont.getAttribute("data-id");
+
+                if (dataIdCheck == "all") {
+                    removeClass(cont, 'invise');
+                } else if (dataIdCheck != contDataId) {
                     addClass(cont, 'invise');
                 } else {
                     removeClass(cont, 'invise');
                 }
 
             });
+        }
 
-            btn.addEventListener('click', () => {
-
-
-                if (btnDataId == "all") {
-                    all_btn_filt_v1.forEach(el => {
-                        removeClass(el, 'active');
-                    })
-
-                    all_cont_filt_v1.forEach(cont => {
-                        removeClass(cont, 'invise');
-                    });
-
-                } else {
-                    all_btn_filt_v1.forEach(el => {
-                        removeClass(el, 'active');
-                    })
-
-                    all_cont_filt_v1.forEach(cont => {
-                        let contDataId = cont.getAttribute("data-id");
-                        if (btnDataId != contDataId) {
-                            addClass(cont, 'invise');
-                        } else {
-                            removeClass(cont, 'invise');
-                        }
-                    });
-                }
-
-                addClass(btn, 'active');
-            })
-
-            num_1++;
-        });
-
-        all_cont_filt_v1.forEach(cont => {
-            let contDataId = cont.getAttribute("data-id");
-
-            if (dataIdCheck == "all") {
-                removeClass(cont, 'invise');
-            } else if (dataIdCheck != contDataId) {
-                addClass(cont, 'invise');
-            } else {
-                removeClass(cont, 'invise');
-            }
-
-        });
     }
 
     if (document.querySelector('[data-check-lines]')) {
